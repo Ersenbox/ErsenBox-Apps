@@ -1,619 +1,81 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="light" data-palette="emerald">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OFFLINE-KURAN 26 · Kutsal Kur'an-ı Kerim Rehberiniz & Dijital Mushaf</title>
-<meta name="description" content="OFFLINE-KURAN 26 — Dijital Mushaf, sesli tilâvet, otomatik zikirmatik, dualar ve 4 dil desteği. 100% çevrimdışı, reklamsız ve güvenli.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="OFFLINE-KURAN 26 · Kutsal Kur'an-ı Kerim Rehberiniz">
-<meta property="og:description" content="114 sûre & 30 cüz, sesli tilâvet, zikirmatik, dualar. 4 dil. 100% çevrimdışı.">
-<meta property="og:image" content="https://www.genspark.ai/api/files/s/58QebsRb">
+<title>ErsenBox Apps · Ücretsiz Android uygulamaları ve web uygulamaları</title>
+<meta name="description" content="ErsenBox uygulamaları: Kur&#x27;an, namaz, zikir, dua ve günlük yaşam uygulamaları. APK indirin veya web sürümünü doğrudan açın.">
 <link rel="icon" href="data:,">
 <style>
-:root{
-  --brand:#014720; --brand-dk:#012b14; --brand-tx:#014720;
-  --accent:#d9b662; --accent-2:#f0d491; --accent-tx:#241a04;
-  --cyan:#2fb8a4;
-  --bg:#f7f5ee; --surface:#ffffff; --text:#0b1a10; --muted:#4a5b50; --line:#e6e2d4;
-  --radius:18px;
-}
-html[data-palette="sapphire"]{--brand:#0b3d91;--brand-dk:#062a63;--brand-tx:#0b3d91}
-html[data-palette="royal"]{--brand:#4b1d78;--brand-dk:#33104f;--brand-tx:#4b1d78}
-html[data-palette="bordo"]{--brand:#7a1024;--brand-dk:#4d0816;--brand-tx:#7a1024}
-
-html[data-theme="dark"]{
-  --bg:#07130c; --surface:#0e2117; --text:#e9f3ec; --muted:#a3bcab; --line:#1e3a29;
-  --brand-tx:#8fe0b0; --cyan:#7fe6d3;
-}
-html[data-theme="dark"][data-palette="sapphire"]{--brand-tx:#9dc2ff}
-html[data-theme="dark"][data-palette="royal"]{--brand-tx:#cfa8f5}
-html[data-theme="dark"][data-palette="bordo"]{--brand-tx:#ff9fb0}
-
+:root{--brand:#014720;--brand-dk:#012b14;--accent:#d9b662;--accent-2:#f0d491;--bg:#f7f5ee;--surface:#fff;--text:#0b1a10;--muted:#4a5b50;--line:#e6e2d4;--radius:16px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07130c;--surface:#0e2117;--text:#e9f3ec;--muted:#a3bcab;--line:#1e3a29}}
+:root[data-theme="dark"]{--bg:#07130c;--surface:#0e2117;--text:#e9f3ec;--muted:#a3bcab;--line:#1e3a29}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.65;
-  -webkit-font-smoothing:antialiased;transition:background .2s ease,color .2s ease;
-}
-.wrap{width:min(1180px,92vw);margin:0 auto}
-img{display:block;max-width:100%;height:auto}
+body{margin:0;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.wrap{width:min(1100px,calc(100% - 32px));margin:0 auto}
+header{background:linear-gradient(180deg,var(--brand-dk),var(--brand));color:#fff;border-bottom:1px solid rgba(217,182,98,.35)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;flex-wrap:wrap}
+.brand{color:var(--accent-2);font-weight:800;text-decoration:none;letter-spacing:.3px}
+.back{color:#eaf6ee;text-decoration:none;font-size:.9rem}
+.hero{color:#fff;padding:48px 0 40px;background:linear-gradient(160deg,var(--brand) 0%,var(--brand-dk) 100%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.1;margin:0 0 10px;color:var(--accent-2)}
+.lead{color:#e3f2e8;margin:0 0 22px;font-size:1.05rem}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;background:linear-gradient(180deg,var(--accent-2),var(--accent));color:#241a04;font-weight:800;text-decoration:none;padding:12px 22px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.6);box-shadow:none}
+.btn.disabled{opacity:.5;pointer-events:none}
+.cover{border-radius:14px;border:1px solid rgba(217,182,98,.5);box-shadow:0 16px 36px rgba(0,0,0,.4);width:100%;aspect-ratio:16/9;object-fit:cover}
+.cover-ph{border-radius:14px;width:100%;aspect-ratio:16/9;display:grid;place-items:center;background:radial-gradient(circle at 30% 30%,rgba(240,212,145,.25),transparent 60%),rgba(255,255,255,.06);border:1px dashed rgba(217,182,98,.6);color:var(--accent-2);font-size:3rem}
+section{padding:44px 0}
+h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
+:root[data-theme="dark"] h2{color:#8fe0b0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:#8fe0b0}}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0;margin:0;list-style:none}
+.feat li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;border-left:3px solid var(--accent)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal img{border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;counter-reset:s;padding:0;margin:0;list-style:none}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 56px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#241a04;font-weight:900;display:grid;place-items:center}
+.note{color:var(--muted);font-size:.9rem;margin-top:12px}
+.search{width:100%;max-width:420px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:1rem;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:10px}
+.card img,.card .thumb{border-radius:10px;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--bg)}
+.card .thumb{display:grid;place-items:center;color:var(--accent);font-size:2rem;border:1px dashed var(--line)}
+.card h3{margin:0;font-size:1.05rem;color:var(--brand)}
+:root[data-theme="dark"] .card h3{color:#8fe0b0}
+.card p{margin:0;color:var(--muted);font-size:.93rem;flex:1}
+.card .btns .btn{padding:9px 14px;font-size:.88rem;border-radius:10px}
+.card .btn{background:var(--brand);color:#fff}
+.card .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--brand);box-shadow:none}
+:root[data-theme="dark"] .card .btn{background:var(--accent);color:#241a04}
+footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
+footer a{color:#7fe6d3}
 .hidden{display:none!important}
-
-/* header */
-header{
-  position:sticky;top:0;z-index:60;
-  background:linear-gradient(180deg,rgba(1,43,20,.97),rgba(1,71,32,.94));
-  border-bottom:1px solid rgba(217,182,98,.35);backdrop-filter:blur(8px);
-}
-.bar{display:flex;align-items:center;gap:14px;justify-content:space-between;padding:10px 0;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:10px;color:var(--accent-2);font-weight:800;letter-spacing:.4px;text-decoration:none}
-.brand .dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--accent-2),#8d6b1f);box-shadow:0 0 14px rgba(217,182,98,.5)}
-nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-nav a{color:#eaf6ee;text-decoration:none;font-size:.9rem;opacity:.92}
-nav a:hover{color:var(--accent-2)}
-.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.langsw,.palsw{display:flex;gap:5px}
-.langbtn,.palbtn,.themebtn{
-  border:1px solid rgba(217,182,98,.55);background:rgba(255,255,255,.06);color:#f4fbf6;
-  font-size:.76rem;font-weight:800;padding:6px 9px;border-radius:9px;cursor:pointer;line-height:1
-}
-.langbtn:hover,.palbtn:hover,.themebtn:hover{border-color:var(--accent-2)}
-.langbtn.active{background:var(--accent);color:var(--accent-tx);border-color:var(--accent)}
-.palbtn{width:26px;height:26px;padding:0;border-radius:50%;position:relative}
-.palbtn[data-pal="emerald"]{background:#014720}
-.palbtn[data-pal="sapphire"]{background:#0b3d91}
-.palbtn[data-pal="royal"]{background:#4b1d78}
-.palbtn[data-pal="bordo"]{background:#7a1024}
-.palbtn.active{outline:3px solid var(--accent-2);outline-offset:1px}
-.themebtn{padding:6px 11px}
-.mini-dl{
-  background:linear-gradient(180deg,var(--accent-2),var(--accent));color:#241a04;
-  font-weight:900;text-decoration:none;padding:9px 16px;border-radius:10px;font-size:.86rem;white-space:nowrap;
-  box-shadow:0 6px 18px rgba(0,0,0,.25)
-}
-
-/* hero */
-.hero{
-  position:relative;overflow:hidden;color:#fff;padding:60px 0 54px;
-  background:
-    radial-gradient(1000px 520px at 12% 0%,rgba(255,255,255,.10),transparent 60%),
-    radial-gradient(800px 480px at 95% 100%,rgba(217,182,98,.20),transparent 60%),
-    linear-gradient(160deg,var(--brand) 0%,var(--brand-dk) 78%,#01160b 100%);
-}
-.hero::before,.hero::after{
-  content:"";position:absolute;width:420px;height:420px;opacity:.45;pointer-events:none;border-radius:50%;
-  background:repeating-conic-gradient(from 0deg,rgba(217,182,98,.38) 0deg 6deg,transparent 6deg 12deg);
-  -webkit-mask:radial-gradient(circle,transparent 52%,#000 54%);
-  mask:radial-gradient(circle,transparent 52%,#000 54%);
-}
-.hero::before{top:-190px;left:-160px}
-.hero::after{bottom:-210px;right:-170px}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr 1fr;gap:42px;align-items:center}
-.kicker{display:inline-block;font-size:.74rem;letter-spacing:2.2px;font-weight:800;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
-h1{font-size:clamp(2.05rem,5vw,3.4rem);line-height:1.06;margin:0 0 10px;color:var(--accent-2);font-weight:900;letter-spacing:.5px}
-.sub{font-size:clamp(1rem,2.2vw,1.28rem);color:#f4faf6;margin:0 0 14px;font-weight:600}
-.stars{color:var(--accent);font-size:1.35rem;letter-spacing:4px;margin-bottom:12px}
-.lead{color:#d9ece1;margin:0 0 20px;max-width:56ch}
-.badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.badge{font-size:.77rem;font-weight:700;color:#eafaf3;border:1px solid rgba(127,230,211,.5);background:rgba(127,230,211,.12);padding:5px 11px;border-radius:999px}
-.btnrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.btn{
-  display:inline-flex;flex-direction:column;align-items:center;gap:2px;
-  background:linear-gradient(180deg,var(--accent-2),var(--accent));color:var(--accent-tx);
-  text-decoration:none;font-weight:900;padding:13px 28px;border-radius:14px;
-  box-shadow:0 14px 32px rgba(0,0,0,.30);transition:transform .15s ease
-}
-.btn:hover{transform:translateY(-2px)}
-.btn small{font-weight:700;font-size:.72rem;opacity:.8}
-.btn.ghost{background:rgba(255,255,255,.10);color:#ffffff;border:1px solid rgba(255,255,255,.6);box-shadow:none;font-weight:800}
-.hero-shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.hero-shots img{width:100%;border-radius:14px;border:1px solid rgba(217,182,98,.5);box-shadow:0 18px 38px rgba(0,0,0,.45)}
-
-/* sections */
-section{padding:66px 0}
-.sec-head{text-align:center;max-width:780px;margin:0 auto 40px}
-.sec-head h2{font-size:clamp(1.55rem,3.5vw,2.3rem);margin:0 0 10px;color:var(--brand-tx);font-weight:900}
-.sec-head p{margin:0;color:var(--muted)}
-.rule{width:74px;height:3px;margin:16px auto 0;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--accent))}
-
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-  padding:24px 22px;border-top:3px solid var(--accent);
-  box-shadow:0 10px 26px rgba(0,0,0,.06);transition:transform .16s ease,box-shadow .16s ease
-}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(0,0,0,.14)}
-.card .ico{
-  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
-  background:linear-gradient(160deg,var(--brand),var(--brand-dk));color:var(--accent-2);
-  font-weight:900;font-size:1.05rem;margin-bottom:14px
-}
-.card h3{margin:0 0 8px;font-size:1.03rem;color:var(--brand-tx)}
-.card p{margin:0;font-size:.92rem;color:var(--muted)}
-
-.bandwrap{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.gal-block{margin-bottom:46px}
-.gal-block h3{display:flex;align-items:center;gap:10px;font-size:1.04rem;color:var(--brand-tx);margin:0 0 15px}
-.gal-block h3 i{
-  font-style:normal;font-size:.76rem;font-weight:900;letter-spacing:1.3px;
-  background:var(--accent);color:var(--accent-tx);padding:4px 10px;border-radius:8px
-}
-.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.shots.wide{grid-template-columns:repeat(2,1fr)}
-.shot{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
-.shot img{width:100%;border-radius:14px 14px 0 0}
-.shot figcaption{padding:9px 12px;font-size:.78rem;color:var(--muted);border-top:1px solid var(--line)}
-.shot.fail{display:grid;place-items:center;min-height:130px}
-.shot.fail img,.shot.fail figcaption{display:none}
-.shot.fail::after{content:"⚠";font-size:1.5rem;color:var(--muted);opacity:.6}
-
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px 68px}
-.step::before{
-  counter-increment:s;content:counter(s);position:absolute;left:20px;top:20px;
-  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;
-  background:linear-gradient(160deg,var(--accent-2),var(--accent));color:var(--accent-tx)
-}
-.step h4{margin:0 0 6px;color:var(--brand-tx);font-size:1rem}
-.step p{margin:0;font-size:.9rem;color:var(--muted)}
-
-.faq{display:grid;gap:12px;max-width:900px;margin:0 auto}
-details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
-details[open]{border-color:var(--accent)}
-summary{cursor:pointer;font-weight:800;color:var(--brand-tx);list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";float:right;color:var(--accent);font-weight:900}
-details[open] summary::after{content:"–"}
-details p{margin:12px 0 0;color:var(--muted);font-size:.93rem}
-
-.band{
-  color:#fff;text-align:center;
-  background:
-    radial-gradient(700px 300px at 50% 0%,rgba(217,182,98,.22),transparent 65%),
-    linear-gradient(150deg,var(--brand) 0%,var(--brand-dk) 100%);
-  border-top:1px solid rgba(217,182,98,.35);border-bottom:1px solid rgba(217,182,98,.35)
-}
-.band h2{color:var(--accent-2);margin:0 0 10px;font-size:clamp(1.45rem,3.3vw,2.05rem)}
-.band p{color:#dcefe4;margin:0 auto 22px;max-width:640px}
-.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
-.meta span{font-size:.78rem;border:1px solid rgba(127,230,211,.45);color:#eafaf4;padding:5px 11px;border-radius:999px}
-
-footer{background:#01190c;color:#c9ddce;padding:38px 0 32px;text-align:center;font-size:.87rem}
-footer .fmail a{color:#7fe6d3;text-decoration:none}
-footer .fmail a:hover{text-decoration:underline}
-footer .fname{color:var(--accent-2);font-weight:800;letter-spacing:.4px}
-footer .sep{width:54px;height:2px;background:rgba(217,182,98,.5);margin:16px auto;border-radius:2px}
-.totop{display:inline-block;margin-top:16px;font-size:.78rem;color:#8fb79c;text-decoration:none}
-
-@media (max-width:980px){
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .grid3,.shots,.shots.wide{grid-template-columns:repeat(2,1fr)}
-  nav{display:none}
-}
-@media (max-width:640px){
-  section{padding:50px 0}
-  .grid3,.shots,.shots.wide,.steps{grid-template-columns:1fr}
-  .btn{width:100%;justify-content:center}
-}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap bar">
-    <a class="brand" href="#top"><span class="dot"></span><span>OFFLINE-KURAN 26</span></a>
-    <nav>
-      <a href="#ozellikler" data-i18n="nav_features">Özellikler</a>
-      <a href="#ekranlar" data-i18n="nav_screens">Ekran Görüntüleri</a>
-      <a href="#kurulum" data-i18n="nav_install">Kurulum</a>
-      <a href="#sss" data-i18n="nav_faq">S.S.S.</a>
-    </nav>
-    <div class="controls">
-      <div class="palsw" role="group" aria-label="Renk Paleti">
-        <button class="palbtn active" data-pal="emerald" title="Zümrüt Yeşili"></button>
-        <button class="palbtn" data-pal="sapphire" title="Safir Mavi"></button>
-        <button class="palbtn" data-pal="royal" title="Kraliyet Moru"></button>
-        <button class="palbtn" data-pal="bordo" title="Bordo"></button>
-      </div>
-      <button class="themebtn" id="themeBtn" aria-pressed="false">🌙 <span data-i18n="theme_dark">Gece Modu</span></button>
-      <div class="langsw">
-        <button class="langbtn active" data-lang="tr">TR</button>
-        <button class="langbtn" data-lang="en">EN</button>
-        <button class="langbtn" data-lang="de">DE</button>
-        <button class="langbtn" data-lang="fr">FR</button>
-      </div>
-      <a class="mini-dl" href="#indir" data-i18n="nav_download">APK İndir</a>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="kicker" data-i18n="hero_kicker">Kutsal Kur'an Rehberiniz</span>
-      <h1>OFFLINE-KURAN 26</h1>
-      <p class="sub" data-i18n="hero_sub">Kutsal Kur'an-ı Kerim Rehberiniz &amp; Dijital Mushaf</p>
-      <div class="stars">★★★★★</div>
-      <p class="lead" data-i18n="hero_desc">Dijital Mushaf, âyet âyet sesli tilâvet, otomatik zikirmatik, dualar ve Esmâ-ül Hüsnâ — hepsi tek uygulamada. Android telefon ve tabletlerde çalışır.</p>
-      <div class="badges">
-        <span class="badge" data-i18n="badge_offline">100% Çevrimdışı</span>
-        <span class="badge" data-i18n="badge_noads">Reklamsız</span>
-        <span class="badge" data-i18n="badge_secure">Güvenli</span>
-        <span class="badge" data-i18n="badge_free">Ücretsiz</span>
-      </div>
-      <div class="btnrow">
-        <a class="btn" href="#indir"><span data-i18n="btn_download">APK İndir</span><small>24,3 MB · Android</small></a>
-        <a class="btn ghost" href="#ozellikler" data-i18n="btn_features">Özellikleri Gör</a>
-      </div>
-    </div>
-    <div class="hero-shots">
-      <img src="https://www.genspark.ai/api/files/s/58QebsRb" referrerpolicy="no-referrer" alt="OFFLINE-KURAN 26 Türkçe tanıtım görseli">
-      <img src="https://www.genspark.ai/api/files/s/3mGUV65J" referrerpolicy="no-referrer" alt="OFFLINE-KURAN 26 English promotional image">
-      <img src="https://www.genspark.ai/api/files/s/lhc4aVqn" referrerpolicy="no-referrer" alt="OFFLINE-KURAN 26 Deutsch Werbebild">
-      <img src="https://www.genspark.ai/api/files/s/xY8XyUTZ" referrerpolicy="no-referrer" alt="OFFLINE-KURAN 26 visuel promotionnel français">
-    </div>
-  </div>
-</section>
-
-<section id="ozellikler">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-i18n="feat_title">Uygulama Özellikleri</h2>
-      <p data-i18n="feat_sub">Kur'an okumak, dinlemek ve zikretmek için ihtiyacınız olan her şey.</p>
-      <div class="rule"></div>
-    </div>
-    <div class="grid3">
-      <article class="card"><div class="ico">۩</div><h3 data-i18n="f1t">Dijital Mushaf</h3><p data-i18n="f1d">114 sûre ve 30 cüz, sayfa numaralı gezinme.</p></article>
-      <article class="card"><div class="ico">♪</div><h3 data-i18n="f2t">Sesli Tilâvet</h3><p data-i18n="f2d">Okuma hızı 0,75x–2,0x, âyet âyet kesintisiz dinleme.</p></article>
-      <article class="card"><div class="ico">⛔</div><h3 data-i18n="f3t">Çevrimdışı Kullanım</h3><p data-i18n="f3d">İnternet olmadan oku ve dinle; indirilen sesler cihazda kalır.</p></article>
-      <article class="card"><div class="ico">☾</div><h3 data-i18n="f4t">Otomatik Zikirmatik</h3><p data-i18n="f4d">Esmâ-ül Hüsnâ (99 isim), hedef zikir, SAY / SIFIRLA / Paylaş.</p></article>
-      <article class="card"><div class="ico">⌂</div><h3 data-i18n="f5t">Namaz Sureleri &amp; Duaları</h3><p data-i18n="f5d">Namazda okunan sûreler ve dualar bir arada.</p></article>
-      <article class="card"><div class="ico">★</div><h3 data-i18n="f6t">En Çok Okunan Sureler</h3><p data-i18n="f6d">Yâsîn, Mülk, Cuma ve diğerleri tek dokunuşla.</p></article>
-      <article class="card"><div class="ico">❖</div><h3 data-i18n="f7t">Dua &amp; Şifa Ayetleri</h3><p data-i18n="f7d">Dua ayetleri ve şifa ayetleri ayrı bölümlerde.</p></article>
-      <article class="card"><div class="ico">⚑</div><h3 data-i18n="f8t">Ayraçlar</h3><p data-i18n="f8d">Kaldığın yeri işaretle, favori sûreleri kaydet.</p></article>
-      <article class="card"><div class="ico">◐</div><h3 data-i18n="f9t">Kişiselleştirme</h3><p data-i18n="f9d">Karanlık/aydınlık mod, renk paletleri, yazı tipi ve meal seçimi.</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="ekranlar" class="bandwrap">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-i18n="gal_title">Ekran Görüntüleri</h2>
-      <p data-i18n="gal_sub">Uygulamanın gerçek arayüz görselleri.</p>
-      <div class="rule"></div>
-    </div>
-
-    <div class="gal-block">
-      <h3><i>TR</i> Türkçe</h3>
-      <div class="shots">
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/58QebsRb" alt="Türkçe ekranlar 1"><figcaption>Türkçe · genel bakış</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/JFHGIoVW" alt="Türkçe ekranlar 2"><figcaption>Türkçe · menü ve kategoriler</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/FS8DhNX7" alt="Türkçe ekranlar 3"><figcaption>Türkçe · zikirmatik</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/6NFU7uep" alt="Türkçe ekranlar 4"><figcaption>Türkçe · sûre listesi</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/tgJJYBq6" alt="Türkçe ekranlar 5"><figcaption>Türkçe · ayarlar</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/Hk13mwow" alt="Türkçe şablon"><figcaption>Türkçe · başlık şablonu</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="gal-block">
-      <h3><i>EN</i> English</h3>
-      <div class="shots">
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/3mGUV65J" alt="English screens 1"><figcaption>English · overview</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/leZDHRHl" alt="English screens 2"><figcaption>English · app screens</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/u730LIfK" alt="English screens 3"><figcaption>English · features</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="gal-block">
-      <h3><i>DE</i> Deutsch</h3>
-      <div class="shots">
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/lhc4aVqn" alt="Deutsche Bildschirme 1"><figcaption>Deutsch · Übersicht</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/XOos1eFV" alt="Deutsche Bildschirme 2"><figcaption>Deutsch · App-Bildschirme</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/UzrgDheE" alt="Deutsche Bildschirme 3"><figcaption>Deutsch · Sure &amp; Zikirmatik</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/PkOwBMPa" alt="Deutsche Bildschirme 4"><figcaption>Deutsch · Funktionen</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="gal-block">
-      <h3><i>FR</i> Français</h3>
-      <div class="shots">
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/xY8XyUTZ" alt="Écrans français 1"><figcaption>Français · aperçu</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/l8SYTdrh" alt="Écrans français 2"><figcaption>Français · écrans</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/euxonELJ" alt="Écrans français 3"><figcaption>Français · réglages</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/3l1RteOh" alt="Écrans français 4"><figcaption>Français · liste des sourates</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/recqHyWO" alt="Modèle français"><figcaption>Français · bandeau</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="gal-block" style="margin-bottom:0">
-      <h3><i>★</i> <span data-i18n="gal_feat">Öne Çıkanlar</span></h3>
-      <div class="shots wide">
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/iS4OKjss" alt="Öne çıkan özellikler"><figcaption data-i18n="cap_feat1">Kur'an Kerim · Sesli Tilâvet · Offline Modda</figcaption></figure>
-        <figure class="shot"><img loading="lazy" referrerpolicy="no-referrer" src="https://www.genspark.ai/api/files/s/EazjzPYO" alt="Fonctions en vedette"><figcaption data-i18n="cap_feat2">Coran Complet · Récitation Audio · Mode Hors-ligne</figcaption></figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="indir">
-  <div class="wrap">
-    <h2 data-i18n="dl_title">Uygulamayı İndir</h2>
-    <p data-i18n="dl_desc">APK dosyasını indirip Android cihazınıza kurun. İnternet bağlantısı olmadan da çalışır.</p>
-    <a class="btn" href="https://pub-b130636bd7cd49d7a8fc052e042e9c38.r2.dev/Offline-Kuran-26.apk" download>
-      <span data-i18n="btn_download">APK İndir</span><small>Offline-Kuran-26.apk</small>
-    </a>
-    <div class="meta">
-      <span>24,3 MB</span><span>Android</span>
-      <span data-i18n="badge_offline">100% Çevrimdışı</span>
-      <span data-i18n="badge_noads">Reklamsız</span>
-    </div>
-  </div>
-</section>
-
-<section id="kurulum">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-i18n="inst_title">Kurulum Rehberi</h2>
-      <p data-i18n="inst_sub">Dört adımda kurulum.</p>
-      <div class="rule"></div>
-    </div>
-    <div class="steps">
-      <div class="step"><h4 data-i18n="inst1t">APK dosyasını indirin</h4><p data-i18n="inst1d">Yukarıdaki "APK İndir" düğmesine dokunun ve dosyanın indirilmesini bekleyin.</p></div>
-      <div class="step"><h4 data-i18n="inst2t">Dosyayı açın</h4><p data-i18n="inst2d">İndirilen "Offline-Kuran-26.apk" dosyasına dokunarak kurulumu başlatın.</p></div>
-      <div class="step"><h4 data-i18n="inst3t">İzni onaylayın</h4><p data-i18n="inst3d">Cihaz sorarsa tarayıcı için "bilinmeyen kaynaklardan uygulama yükleme" iznini verin.</p></div>
-      <div class="step"><h4 data-i18n="inst4t">Kurulumu tamamlayın</h4><p data-i18n="inst4d">"Yükle" düğmesine dokunun; uygulama simgesi ana ekranda görünecektir.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="sss" class="bandwrap">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-i18n="faq_title">Sıkça Sorulan Sorular</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="faq">
-      <details open><summary data-i18n="q1">Uygulama ücretsiz mi?</summary><p data-i18n="a1">Evet. Uygulama ücretsizdir ve reklam içermez.</p></details>
-      <details><summary data-i18n="q2">İnternet bağlantısı gerekiyor mu?</summary><p data-i18n="a2">Hayır. Uygulama çevrimdışı çalışır; okuyabilir ve indirdiğiniz sesleri dinleyebilirsiniz.</p></details>
-      <details><summary data-i18n="q3">APK nasıl kurulur?</summary><p data-i18n="a3">APK dosyasını indirin, açın ve cihaz izin isterse "bilinmeyen kaynaklar" iznini verin.</p></details>
-      <details><summary data-i18n="q4">Hangi diller destekleniyor?</summary><p data-i18n="a4">Türkçe, English, Deutsch ve Français.</p></details>
-      <details><summary data-i18n="q5">Hangi cihazlarda çalışır?</summary><p data-i18n="a5">Android telefon ve tabletlerde çalışır.</p></details>
-      <details><summary data-i18n="q6">Nasıl iletişime geçebilirim?</summary><p data-i18n="a6">E-posta ile: islam@ersenbox.com</p></details>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="fname" data-i18n="foot_info">Uygulama Bilgileri</div>
-    <div class="sep"></div>
-    <div data-i18n="foot_copy">© 2026 ErsenBox – DINIM ISLAM</div>
-    <div class="fmail" style="margin-top:8px">
-      <span data-i18n="foot_contact">İletişim</span> |
-      <a href="mailto:islam@ersenbox.com">islam@ersenbox.com</a>
-    </div>
-    <a class="totop" href="#top">↑ <span data-i18n="foot_top">Başa dön</span></a>
-  </div>
-</footer>
-
+<header><div class="wrap bar"><a class="brand" href="index.html">ErsenBox Apps</a><a class="back" href="index.html">← Tüm uygulamalar</a></div></header>
+<section class="hero"><div class="wrap">
+<h1>ErsenBox Apps</h1><p class="lead">ErsenBox uygulamaları: Kur&#x27;an, namaz, zikir, dua ve günlük yaşam uygulamaları. APK indirin veya web sürümünü doğrudan açın.</p></div></section>
+<section><div class="wrap">
+<input class="search" id="q" type="search" placeholder="Uygulama ara…" aria-label="Uygulama ara">
+<div class="grid" id="grid"><article class="card" data-name="offline-kuran 26"><img loading="lazy" src="assets/offline-kuran-26/tr-banner.jpg" alt="Offline-Kuran 26"><h3>Offline-Kuran 26</h3><p>Kur&#x27;an-ı Kerim&#x27;i internet olmadan okuyun ve dinleyin.</p><div class="btns"><a class="btn" href="https://pub-b130636bd7cd49d7a8fc052e042e9c38.r2.dev/Offline-Kuran%2026%20v1.1..apk" download>APK</a></div><a class="note" href="apps/offline-kuran-26/">Detaylar →</a></article><article class="card" data-name="amel defterim 26"><div class="thumb" aria-hidden="true">☪</div><h3>Amel Defterim 26</h3><p>Günlük ibadet ve amel takibi.</p><div class="btns"><a class="btn" href="https://pub-5a0d65c5dbbd459c9010aa1bc943475b.r2.dev/Amel%20Defterim%2026%20%20v.1.0.apk" download>APK</a></div><a class="note" href="apps/amel-defterim-26/">Detaylar →</a></article><article class="card" data-name="benim tesbihim 26"><div class="thumb" aria-hidden="true">☪</div><h3>Benim Tesbihim 26</h3><p>Zikir ve tesbih sayacı.</p><div class="btns"><a class="btn" href="https://pub-8735fd7004b049af81a32fd187f23266.r2.dev/benim-tesbihim-26.apk" download>APK</a></div><a class="note" href="apps/benim-tesbihim-26/">Detaylar →</a></article><article class="card" data-name="ersenbox kur&#x27;an-ı kerim 26"><div class="thumb" aria-hidden="true">☪</div><h3>ErsenBox Kur&#x27;an-ı Kerim 26</h3><p>Kur&#x27;an-ı Kerim okuma ve dinleme uygulaması.</p><div class="btns"><a class="btn" href="https://pub-2b2f9b67d3694211ae44af4cb030f039.r2.dev/ersenbox-kurani-kerim-26.apk" download>APK</a></div><a class="note" href="apps/ersenbox-kurani-kerim-26/">Detaylar →</a></article><article class="card" data-name="hadis ve sünnet atlası"><div class="thumb" aria-hidden="true">☪</div><h3>Hadis ve Sünnet Atlası</h3><p>Hadis ve sünnet kaynaklarını keşfedin.</p><div class="btns"><a class="btn" href="https://pub-7fb7394236f84e448c4d55a72d7d2af8.r2.dev/hadis-sunnet-atlasi-26.apk.apk" download>APK</a><a class="btn ghost" href="https://hadis-sunnet-atlasi.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/hadis-sunnet-atlasi-26/">Detaylar →</a></article><article class="card" data-name="i̇slam takvimi 26"><div class="thumb" aria-hidden="true">☪</div><h3>İslam Takvimi 26</h3><p>İslami takvim ve önemli günler.</p><div class="btns"><a class="btn" href="https://pub-799bb6059c2b4908a746d0a49c859d75.r2.dev/Islam-Takvimi%2026%20v.1.2.apk" download>APK</a></div><a class="note" href="apps/islam-takvimi-26/">Detaylar →</a></article><article class="card" data-name="kassenbuch 26"><div class="thumb" aria-hidden="true">☪</div><h3>Kassenbuch 26</h3><p>Gelir ve gider takibi için kasa defteri.</p><div class="btns"><a class="btn" href="https://pub-0d55116c19f94af28f81761bf2bf002d.r2.dev/Kassenbuch%2026%20v.2.0..apk" download>APK</a></div><a class="note" href="apps/kassenbuch-26/">Detaylar →</a></article><article class="card" data-name="mathe-puzzle spiel 26"><div class="thumb" aria-hidden="true">☪</div><h3>Mathe-Puzzle Spiel 26</h3><p>Matematik bulmaca oyunu.</p><div class="btns"><a class="btn" href="https://pub-5821f36315c54ede84c47adf18489b03.r2.dev/Mathe-Puzzle%20Spiel%2026.apk" download>APK</a></div><a class="note" href="apps/mathe-puzzle-26/">Detaylar →</a></article><article class="card" data-name="smart planer 26"><div class="thumb" aria-hidden="true">☪</div><h3>Smart Planer 26</h3><p>Akıllı günlük ve görev planlayıcı.</p><div class="btns"><a class="btn" href="https://pub-67aec7c77e3b4de2a546c0c20805dff8.r2.dev/smart-planer-26.apk" download>APK</a></div><a class="note" href="apps/smart-planer-26/">Detaylar →</a></article><article class="card" data-name="yolumuz kur&#x27;an 26"><div class="thumb" aria-hidden="true">☪</div><h3>Yolumuz Kur&#x27;an 26</h3><p>Kur&#x27;an okuma yolculuğunuz için uygulama.</p><div class="btns"><a class="btn" href="https://pub-47a0b716272d425990ad718fabec3431.r2.dev/Yolumuz%20Kur%27an%2026%20v.1.0.0.apk" download>APK</a></div><a class="note" href="apps/yolumuz-kuran-26/">Detaylar →</a></article><article class="card" data-name="türkisch lernen 26"><div class="thumb" aria-hidden="true">☪</div><h3>Türkisch Lernen 26</h3><p>Türkçe öğrenme uygulaması.</p><div class="btns"><a class="btn" href="https://pub-b4ec92837c7848dcaad149df58d2b671.r2.dev/tuerkisch-lernen-26.apk" download>APK</a></div><a class="note" href="apps/tuerkisch-lernen-26/">Detaylar →</a></article><article class="card" data-name="passwort-safe 26"><div class="thumb" aria-hidden="true">☪</div><h3>Passwort-Safe 26</h3><p>Parolalarınızı güvenle saklayın.</p><div class="btns"><a class="btn" href="https://pub-4b891171e681460dbeac7cf4db5c3bea.r2.dev/passwort-safe-26.apk" download>APK</a></div><a class="note" href="apps/passwort-safe-26/">Detaylar →</a></article><article class="card" data-name="sprachcenter 26"><div class="thumb" aria-hidden="true">☪</div><h3>SprachCenter 26</h3><p>Sesle yazma, sesli okuma ve çeviri.</p><div class="btns"><a class="btn" href="https://pub-bdcca29daec248008985690c8790b08d.r2.dev/sprachcenter-26.apk" download>APK</a></div><a class="note" href="apps/sprachcenter-26/">Detaylar →</a></article><article class="card" data-name="inkpad not defteri"><div class="thumb" aria-hidden="true">☪</div><h3>Inkpad Not Defteri</h3><p>Hızlı ve sade not defteri.</p><div class="btns"><a class="btn" href="https://pub-a967f0d0678e46a69c076756f7bff016.r2.dev/inkpad-not-defteri.apk" download>APK</a></div><a class="note" href="apps/inkpad-not-defteri/">Detaylar →</a></article><article class="card" data-name="smartnotes 26"><div class="thumb" aria-hidden="true">☪</div><h3>Smartnotes 26</h3><p>Akıllı not uygulaması.</p><div class="btns"><a class="btn" href="https://pub-7d4ecbe49f1d4021aac291dcec43f329.r2.dev/smartnotes-26.apk" download>APK</a></div><a class="note" href="apps/smartnotes-26/">Detaylar →</a></article><article class="card" data-name="notize 26"><div class="thumb" aria-hidden="true">☪</div><h3>Notize 26</h3><p>Notlarınızı hızlıca yazın ve düzenleyin.</p><div class="btns"><a class="btn" href="https://pub-ddebe898383d4feba280f5f0d7e1280c.r2.dev/notize-26.apk" download>APK</a></div><a class="note" href="apps/notize-26/">Detaylar →</a></article><article class="card" data-name="multi-scanner 26"><div class="thumb" aria-hidden="true">☪</div><h3>Multi-Scanner 26</h3><p>Tarama uygulaması.</p><div class="btns"><a class="btn" href="https://pub-a3547a15148543de9d0cc173578b1468.r2.dev/multi-scanner-26.apk" download>APK</a></div><a class="note" href="apps/multi-scanner-26/">Detaylar →</a></article><article class="card" data-name="auto-connect 26"><div class="thumb" aria-hidden="true">☪</div><h3>Auto-Connect 26</h3><p>Otomatik bağlantı uygulaması.</p><div class="btns"><a class="btn" href="https://pub-6cdb68c1db124c9b95f54aab7b14caac.r2.dev/auto-connect-26.apk" download>APK</a></div><a class="note" href="apps/auto-connect-26/">Detaylar →</a></article><article class="card" data-name="ersenbox mathe 26"><div class="thumb" aria-hidden="true">☪</div><h3>ErsenBox Mathe 26</h3><p>Matematik çalışma uygulaması.</p><div class="btns"><a class="btn" href="https://pub-a8fbf79a79fc400c84452e705fe7804e.r2.dev/ersenbox-mathe-26.apk" download>APK</a></div><a class="note" href="apps/ersenbox-mathe-26/">Detaylar →</a></article><article class="card" data-name="ersenbox multi-tabelle 26"><div class="thumb" aria-hidden="true">☪</div><h3>ErsenBox Multi-Tabelle 26</h3><p>Çarpım tablosu çalışma uygulaması.</p><div class="btns"><a class="btn" href="https://pub-c1ddd6b9ca1f4ce39c32ca92b1899dbc.r2.dev/ersenbox-multi-tabele-26.apk" download>APK</a></div><a class="note" href="apps/ersenbox-multi-tabele-26/">Detaylar →</a></article><article class="card" data-name="kur&#x27;an dinle 26"><div class="thumb" aria-hidden="true">☪</div><h3>Kur&#x27;an Dinle 26</h3><p>Kur&#x27;an-ı Kerim dinleme uygulaması.</p><div class="btns"><a class="btn ghost" href="https://kuran-dinle-26.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/kuran-dinle-26/">Detaylar →</a></article><article class="card" data-name="namaz hocam 26"><div class="thumb" aria-hidden="true">☪</div><h3>Namaz Hocam 26</h3><p>Namaz öğrenme rehberi.</p><div class="btns"><a class="btn ghost" href="https://namaz-hocam-26.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/namaz-hocam-26/">Detaylar →</a></article><article class="card" data-name="dua atlası"><div class="thumb" aria-hidden="true">☪</div><h3>Dua Atlası</h3><p>Dualar ve kaynakları.</p><div class="btns"><a class="btn ghost" href="https://dua-atlasi.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/dua-atlasi/">Detaylar →</a></article><article class="card" data-name="kur&#x27;an 26"><div class="thumb" aria-hidden="true">☪</div><h3>Kur&#x27;an 26</h3><p>Kur&#x27;an-ı Kerim web uygulaması.</p><div class="btns"><a class="btn ghost" href="https://kuran-26.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/kuran-26/">Detaylar →</a></article><article class="card" data-name="kur&#x27;an&#x27;daki peygamberler"><div class="thumb" aria-hidden="true">☪</div><h3>Kur&#x27;an&#x27;daki Peygamberler</h3><p>Kur&#x27;an&#x27;da adı geçen peygamberler.</p><div class="btns"><a class="btn ghost" href="https://kurandaki-peygamberler.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/kurandaki-peygamberler/">Detaylar →</a></article><article class="card" data-name="peygamberimizin hayatı"><div class="thumb" aria-hidden="true">☪</div><h3>Peygamberimizin Hayatı</h3><p>Hz. Muhammed&#x27;in (s.a.v.) hayatı.</p><div class="btns"><a class="btn ghost" href="https://peygamberimizin-hayati.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/peygamberimizin-hayati/">Detaylar →</a></article><article class="card" data-name="zikirmatik 26"><div class="thumb" aria-hidden="true">☪</div><h3>Zikirmatik 26</h3><p>Web tabanlı zikirmatik.</p><div class="btns"><a class="btn ghost" href="https://zikirmatik-26.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/zikirmatik-26/">Detaylar →</a></article><article class="card" data-name="namaz vakti 26"><div class="thumb" aria-hidden="true">☪</div><h3>Namaz Vakti 26</h3><p>Namaz vakitleri.</p><div class="btns"><a class="btn ghost" href="https://namaz-vakti-26.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/namaz-vakti-26/">Detaylar →</a></article><article class="card" data-name="salavatlar atlası"><div class="thumb" aria-hidden="true">☪</div><h3>Salavatlar Atlası</h3><p>Salavat-ı Şerifler.</p><div class="btns"><a class="btn ghost" href="https://salavatlar-atlasi.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/salavatlar-atlasi/">Detaylar →</a></article><article class="card" data-name="sahabe atlası"><div class="thumb" aria-hidden="true">☪</div><h3>Sahabe Atlası</h3><p>Sahabe-i Kiram hakkında bilgiler.</p><div class="btns"><a class="btn ghost" href="https://sahabe-atlasi.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/sahabe-atlasi/">Detaylar →</a></article><article class="card" data-name="peygamberimizin şahsiyeti"><div class="thumb" aria-hidden="true">☪</div><h3>Peygamberimizin Şahsiyeti</h3><p>Hz. Muhammed&#x27;in (s.a.v.) şahsiyeti ve ahlakı.</p><div class="btns"><a class="btn ghost" href="https://peygamberimizin-sahsiyeti.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/peygamberimizin-sahsiyeti/">Detaylar →</a></article><article class="card" data-name="digital zikir 26"><div class="thumb" aria-hidden="true">☪</div><h3>Digital Zikir 26</h3><p>Dijital zikir sayacı.</p><div class="btns"><a class="btn ghost" href="https://digital-zikir-26.pages.dev" target="_blank" rel="noopener">Web</a></div><a class="note" href="apps/digital-zikir-26/">Detaylar →</a></article></div>
+</div></section>
+<footer><div class='wrap'>© 2026 ErsenBox</div></footer>
 <script>
-var I18N = {
- tr:{
-  nav_features:"Özellikler",nav_screens:"Ekran Görüntüleri",nav_install:"Kurulum",nav_faq:"S.S.S.",nav_download:"APK İndir",
-  theme_dark:"Gece Modu",theme_light:"Gündüz Modu",
-  hero_kicker:"Kutsal Kur'an Rehberiniz",
-  hero_sub:"Kutsal Kur'an-ı Kerim Rehberiniz & Dijital Mushaf",
-  hero_desc:"Dijital Mushaf, âyet âyet sesli tilâvet, otomatik zikirmatik, dualar ve Esmâ-ül Hüsnâ — hepsi tek uygulamada. Android telefon ve tabletlerde çalışır.",
-  badge_offline:"100% Çevrimdışı",badge_noads:"Reklamsız",badge_secure:"Güvenli",badge_free:"Ücretsiz",
-  btn_download:"APK İndir",btn_features:"Özellikleri Gör",
-  feat_title:"Uygulama Özellikleri",feat_sub:"Kur'an okumak, dinlemek ve zikretmek için ihtiyacınız olan her şey.",
-  f1t:"Dijital Mushaf",f1d:"114 sûre ve 30 cüz, sayfa numaralı gezinme.",
-  f2t:"Sesli Tilâvet",f2d:"Okuma hızı 0,75x–2,0x, âyet âyet kesintisiz dinleme.",
-  f3t:"Çevrimdışı Kullanım",f3d:"İnternet olmadan oku ve dinle; indirilen sesler cihazda kalır.",
-  f4t:"Otomatik Zikirmatik",f4d:"Esmâ-ül Hüsnâ (99 isim), hedef zikir, SAY / SIFIRLA / Paylaş.",
-  f5t:"Namaz Sureleri & Duaları",f5d:"Namazda okunan sûreler ve dualar bir arada.",
-  f6t:"En Çok Okunan Sureler",f6d:"Yâsîn, Mülk, Cuma ve diğerleri tek dokunuşla.",
-  f7t:"Dua & Şifa Ayetleri",f7d:"Dua ayetleri ve şifa ayetleri ayrı bölümlerde.",
-  f8t:"Ayraçlar",f8d:"Kaldığın yeri işaretle, favori sûreleri kaydet.",
-  f9t:"Kişiselleştirme",f9d:"Karanlık/aydınlık mod, renk paletleri, yazı tipi ve meal seçimi.",
-  gal_title:"Ekran Görüntüleri",gal_sub:"Uygulamanın gerçek arayüz görselleri.",gal_feat:"Öne Çıkanlar",
-  cap_feat1:"Kur'an Kerim · Sesli Tilâvet · Offline Modda",cap_feat2:"Coran Complet · Récitation Audio · Mode Hors-ligne",
-  dl_title:"Uygulamayı İndir",dl_desc:"APK dosyasını indirip Android cihazınıza kurun. İnternet bağlantısı olmadan da çalışır.",
-  inst_title:"Kurulum Rehberi",inst_sub:"Dört adımda kurulum.",
-  inst1t:"APK dosyasını indirin",inst1d:"Yukarıdaki \"APK İndir\" düğmesine dokunun ve dosyanın indirilmesini bekleyin.",
-  inst2t:"Dosyayı açın",inst2d:"İndirilen \"Offline-Kuran-26.apk\" dosyasına dokunarak kurulumu başlatın.",
-  inst3t:"İzni onaylayın",inst3d:"Cihaz sorarsa tarayıcı için \"bilinmeyen kaynaklardan uygulama yükleme\" iznini verin.",
-  inst4t:"Kurulumu tamamlayın",inst4d:"\"Yükle\" düğmesine dokunun; uygulama simgesi ana ekranda görünecektir.",
-  faq_title:"Sıkça Sorulan Sorular",
-  q1:"Uygulama ücretsiz mi?",a1:"Evet. Uygulama ücretsizdir ve reklam içermez.",
-  q2:"İnternet bağlantısı gerekiyor mu?",a2:"Hayır. Uygulama çevrimdışı çalışır; okuyabilir ve indirdiğiniz sesleri dinleyebilirsiniz.",
-  q3:"APK nasıl kurulur?",a3:"APK dosyasını indirin, açın ve cihaz izin isterse \"bilinmeyen kaynaklar\" iznini verin.",
-  q4:"Hangi diller destekleniyor?",a4:"Türkçe, English, Deutsch ve Français.",
-  q5:"Hangi cihazlarda çalışır?",a5:"Android telefon ve tabletlerde çalışır.",
-  q6:"Nasıl iletişime geçebilirim?",a6:"E-posta ile: islam@ersenbox.com",
-  foot_info:"Uygulama Bilgileri",foot_copy:"© 2026 ErsenBox – DINIM ISLAM",foot_contact:"İletişim",foot_top:"Başa dön"
- },
- en:{
-  nav_features:"Features",nav_screens:"Screenshots",nav_install:"Install",nav_faq:"FAQ",nav_download:"Get APK",
-  theme_dark:"Night Mode",theme_light:"Day Mode",
-  hero_kicker:"Your Holy Quran Companion",
-  hero_sub:"Your Holy Quran Companion & Digital Mushaf",
-  hero_desc:"Digital Mushaf, verse-by-verse audio recitation, automatic dhikr counter, duas and the 99 Names of Allah — all in one app. Runs on Android phones and tablets.",
-  badge_offline:"100% Offline",badge_noads:"Ad-Free",badge_secure:"Secure",badge_free:"Free",
-  btn_download:"Download APK",btn_features:"See Features",
-  feat_title:"App Features",feat_sub:"Everything you need to read, listen and remember.",
-  f1t:"Digital Mushaf",f1d:"114 surahs and 30 juz with page-number navigation.",
-  f2t:"Audio Recitation",f2d:"Reading speed 0.75x–2.0x, continuous verse-by-verse listening.",
-  f3t:"Offline Use",f3d:"Read and listen without internet; downloaded audio stays on your device.",
-  f4t:"Automatic Dhikr Counter",f4d:"99 Names of Allah, target count, COUNT / RESET / Share.",
-  f5t:"Prayer Surahs & Duas",f5d:"Surahs and duas recited in prayer, in one place.",
-  f6t:"Most Read Surahs",f6d:"Yasin, Mulk, Jumu'ah and more with one tap.",
-  f7t:"Dua & Healing Verses",f7d:"Dua verses and healing verses in separate sections.",
-  f8t:"Bookmarks",f8d:"Mark your place, save your favourite surahs.",
-  f9t:"Personalisation",f9d:"Dark/light mode, colour palettes, font and translation choice.",
-  gal_title:"Screenshots",gal_sub:"Real interface images of the app.",gal_feat:"Highlights",
-  cap_feat1:"Holy Quran · Audio Recitation · Offline Mode",cap_feat2:"Full Quran · Audio Recitation · Offline Mode",
-  dl_title:"Download the App",dl_desc:"Download the APK and install it on your Android device. It also works with no internet connection.",
-  inst_title:"Install Guide",inst_sub:"Installation in four steps.",
-  inst1t:"Download the APK",inst1d:"Tap the \"Download APK\" button above and wait for the file to download.",
-  inst2t:"Open the file",inst2d:"Tap the downloaded \"Offline-Kuran-26.apk\" file to start the installer.",
-  inst3t:"Confirm the permission",inst3d:"If your device asks, allow your browser to install apps from unknown sources.",
-  inst4t:"Finish installation",inst4d:"Tap \"Install\"; the app icon will appear on your home screen.",
-  faq_title:"Frequently Asked Questions",
-  q1:"Is the app free?",a1:"Yes. The app is free and contains no ads.",
-  q2:"Do I need an internet connection?",a2:"No. The app works offline; you can read and listen to downloaded audio.",
-  q3:"How do I install the APK?",a3:"Download the APK, open it, and allow \"unknown sources\" if your device asks.",
-  q4:"Which languages are supported?",a4:"Turkish, English, German and French.",
-  q5:"Which devices are supported?",a5:"Android phones and tablets.",
-  q6:"How can I get in touch?",a6:"By e-mail: islam@ersenbox.com",
-  foot_info:"App Information",foot_copy:"© 2026 ErsenBox – DINIM ISLAM",foot_contact:"Contact",foot_top:"Back to top"
- },
- de:{
-  nav_features:"Funktionen",nav_screens:"Screenshots",nav_install:"Installation",nav_faq:"FAQ",nav_download:"APK laden",
-  theme_dark:"Nachtmodus",theme_light:"Tagmodus",
-  hero_kicker:"Ihr Heiliger Quran Führer",
-  hero_sub:"Ihr Heiliger Quran Führer & Digitaler Mushaf",
-  hero_desc:"Digitaler Mushaf, Vers-für-Vers-Audio-Rezitation, automatischer Zikirmatik, Bittgebete und die 99 Namen Allahs — alles in einer App. Läuft auf Android-Handys und Tablets.",
-  badge_offline:"100% Offline",badge_noads:"Ohne Werbung",badge_secure:"Sicher",badge_free:"Kostenlos",
-  btn_download:"APK herunterladen",btn_features:"Funktionen ansehen",
-  feat_title:"App-Funktionen",feat_sub:"Alles, was Sie zum Lesen, Hören und Gedenken brauchen.",
-  f1t:"Digitaler Mushaf",f1d:"114 Suren und 30 Dschuz mit Seiten-Navigation.",
-  f2t:"Audio-Rezitation",f2d:"Lesegeschwindigkeit 0,75x–2,0x, nahtloses Hören Vers für Vers.",
-  f3t:"Offline-Nutzung",f3d:"Lesen und hören ohne Internet; heruntergeladenes Audio bleibt auf dem Gerät.",
-  f4t:"Automatischer Zikirmatik",f4d:"99 Namen Allahs, Zielzahl, ZÄHLEN / ZURÜCKSETZEN / Teilen.",
-  f5t:"Gebetssuren & Bittgebete",f5d:"Im Gebet gelesene Suren und Bittgebete an einem Ort.",
-  f6t:"Meistgelesene Suren",f6d:"Yasin, Mulk, Dschumu'a und mehr mit einem Tipp.",
-  f7t:"Bittgebets- & Heilverse",f7d:"Bittgebets- und Heilungsverse in eigenen Abschnitten.",
-  f8t:"Lesezeichen",f8d:"Leseposition markieren, Lieblingssuren speichern.",
-  f9t:"Anpassung",f9d:"Dunkel-/Hellmodus, Farbpaletten, Schrift- und Übersetzungswahl.",
-  gal_title:"Screenshots",gal_sub:"Echte Oberflächenbilder der App.",gal_feat:"Highlights",
-  cap_feat1:"Heiliger Koran · Audio-Rezitation · Offline-Modus",cap_feat2:"Vollständiger Koran · Audio-Rezitation · Offline",
-  dl_title:"App herunterladen",dl_desc:"Laden Sie die APK herunter und installieren Sie sie auf Ihrem Android-Gerät. Sie funktioniert auch ohne Internetverbindung.",
-  inst_title:"Installationsanleitung",inst_sub:"Installation in vier Schritten.",
-  inst1t:"APK herunterladen",inst1d:"Tippen Sie oben auf \"APK herunterladen\" und warten Sie, bis die Datei geladen ist.",
-  inst2t:"Datei öffnen",inst2d:"Tippen Sie auf die geladene Datei \"Offline-Kuran-26.apk\", um die Installation zu starten.",
-  inst3t:"Berechtigung bestätigen",inst3d:"Falls Ihr Gerät fragt, erlauben Sie dem Browser die Installation aus unbekannten Quellen.",
-  inst4t:"Installation abschließen",inst4d:"Tippen Sie auf \"Installieren\"; das App-Symbol erscheint auf dem Startbildschirm.",
-  faq_title:"Häufige Fragen",
-  q1:"Ist die App kostenlos?",a1:"Ja. Die App ist kostenlos und enthält keine Werbung.",
-  q2:"Brauche ich eine Internetverbindung?",a2:"Nein. Die App funktioniert offline; Sie können lesen und heruntergeladenes Audio hören.",
-  q3:"Wie installiere ich die APK?",a3:"Laden Sie die APK herunter, öffnen Sie sie und erlauben Sie bei Bedarf \"unbekannte Quellen\".",
-  q4:"Welche Sprachen werden unterstützt?",a4:"Türkisch, Englisch, Deutsch und Französisch.",
-  q5:"Auf welchen Geräten läuft sie?",a5:"Auf Android-Handys und -Tablets.",
-  q6:"Wie kann ich Kontakt aufnehmen?",a6:"Per E-Mail: islam@ersenbox.com",
-  foot_info:"App-Informationen",foot_copy:"© 2026 ErsenBox – DINIM ISLAM",foot_contact:"Kontakt",foot_top:"Nach oben"
- },
- fr:{
-  nav_features:"Fonctions",nav_screens:"Captures",nav_install:"Installation",nav_faq:"FAQ",nav_download:"APK",
-  theme_dark:"Mode nuit",theme_light:"Mode jour",
-  hero_kicker:"Votre compagnon du Saint Coran",
-  hero_sub:"Votre Compagnon du Saint Coran & Mushaf Numérique",
-  hero_desc:"Mushaf numérique, récitation audio verset par verset, compteur de dhikr automatique, invocations et les 99 noms d'Allah — dans une seule application. Fonctionne sur téléphones et tablettes Android.",
-  badge_offline:"100% Hors-ligne",badge_noads:"Sans publicité",badge_secure:"Sécurisé",badge_free:"Gratuit",
-  btn_download:"Télécharger l'APK",btn_features:"Voir les fonctions",
-  feat_title:"Fonctions de l'application",feat_sub:"Tout ce qu'il faut pour lire, écouter et évoquer.",
-  f1t:"Mushaf numérique",f1d:"114 sourates et 30 juz avec navigation par page.",
-  f2t:"Récitation audio",f2d:"Vitesse de lecture 0,75x–2,0x, écoute continue verset par verset.",
-  f3t:"Utilisation hors-ligne",f3d:"Lire et écouter sans internet ; l'audio téléchargé reste sur l'appareil.",
-  f4t:"Compteur de dhikr",f4d:"99 noms d'Allah, objectif, COMPTER / RÉINITIALISER / Partager.",
-  f5t:"Sourates & invocations",f5d:"Sourates et invocations récitées dans la prière, au même endroit.",
-  f6t:"Sourates les plus lues",f6d:"Yâsîn, Mulk, Jumu'ah et plus en un seul toucher.",
-  f7t:"Invocations & guérison",f7d:"Versets d'invocation et de guérison dans des sections séparées.",
-  f8t:"Signets",f8d:"Marquez votre position, enregistrez vos sourates favorites.",
-  f9t:"Personnalisation",f9d:"Mode sombre/clair, palettes de couleurs, police et traduction.",
-  gal_title:"Captures d'écran",gal_sub:"Images réelles de l'interface de l'application.",gal_feat:"Points forts",
-  cap_feat1:"Coran complet · Récitation audio · Mode hors-ligne",cap_feat2:"Coran Complet · Récitation Audio · Mode Hors-ligne",
-  dl_title:"Télécharger l'application",dl_desc:"Téléchargez l'APK et installez-le sur votre appareil Android. Elle fonctionne aussi sans connexion internet.",
-  inst_title:"Guide d'installation",inst_sub:"Installation en quatre étapes.",
-  inst1t:"Télécharger l'APK",inst1d:"Touchez le bouton \"Télécharger l'APK\" ci-dessus et attendez la fin du téléchargement.",
-  inst2t:"Ouvrir le fichier",inst2d:"Touchez le fichier \"Offline-Kuran-26.apk\" téléchargé pour lancer l'installation.",
-  inst3t:"Confirmer l'autorisation",inst3d:"Si l'appareil le demande, autorisez l'installation depuis des sources inconnues.",
-  inst4t:"Terminer l'installation",inst4d:"Touchez \"Installer\" ; l'icône apparaîtra sur votre écran d'accueil.",
-  faq_title:"Questions fréquentes",
-  q1:"L'application est-elle gratuite ?",a1:"Oui. L'application est gratuite et sans publicité.",
-  q2:"Ai-je besoin d'une connexion internet ?",a2:"Non. L'application fonctionne hors-ligne ; vous pouvez lire et écouter l'audio téléchargé.",
-  q3:"Comment installer l'APK ?",a3:"Téléchargez l'APK, ouvrez-le et autorisez les \"sources inconnues\" si l'appareil le demande.",
-  q4:"Quelles langues sont prises en charge ?",a4:"Turc, anglais, allemand et français.",
-  q5:"Sur quels appareils fonctionne-t-elle ?",a5:"Sur les téléphones et tablettes Android.",
-  q6:"Comment vous contacter ?",a6:"Par e-mail : islam@ersenbox.com",
-  foot_info:"Informations sur l'application",foot_copy:"© 2026 ErsenBox – DINIM ISLAM",foot_contact:"Contact",foot_top:"Haut de page"
- }
-};
-var curLang="tr";
-
-function applyLang(l){
-  var d=I18N[l]; if(!d) return;
-  curLang=l;
-  document.documentElement.lang=l;
-  document.querySelectorAll("[data-i18n]").forEach(function(el){
-    var k=el.getAttribute("data-i18n");
-    if(d[k]!==undefined) el.textContent=d[k];
+document.getElementById('q').addEventListener('input',function(){
+  var v=this.value.trim().toLowerCase();
+  document.querySelectorAll('#grid .card').forEach(function(c){
+    c.classList.toggle('hidden', v!=='' && c.getAttribute('data-name').indexOf(v)===-1);
   });
-  document.querySelectorAll(".langbtn").forEach(function(b){
-    b.classList.toggle("active", b.getAttribute("data-lang")===l);
-  });
-  updateThemeBtn();
-  save();
-}
-function updateThemeBtn(){
-  var dark=document.documentElement.getAttribute("data-theme")==="dark";
-  var btn=document.getElementById("themeBtn");
-  var key = dark ? "theme_light" : "theme_dark";
-  var txt = (I18N[curLang]&&I18N[curLang][key]) || key;
-  btn.innerHTML = (dark ? "☀️ " : "🌙 ") + '<span>'+txt+'</span>';
-  btn.setAttribute("aria-pressed", dark ? "true" : "false");
-}
-function setTheme(t){
-  document.documentElement.setAttribute("data-theme", t);
-  updateThemeBtn(); save();
-}
-function setPalette(p){
-  document.documentElement.setAttribute("data-palette", p);
-  document.querySelectorAll(".palbtn").forEach(function(b){
-    b.classList.toggle("active", b.getAttribute("data-pal")===p);
-  });
-  save();
-}
-function save(){
-  try{
-    localStorage.setItem("ok26", JSON.stringify({
-      lang:curLang,
-      theme:document.documentElement.getAttribute("data-theme"),
-      palette:document.documentElement.getAttribute("data-palette")
-    }));
-  }catch(e){}
-}
-document.querySelectorAll(".langbtn").forEach(function(b){
-  b.addEventListener("click",function(){ applyLang(b.getAttribute("data-lang")); });
 });
-document.querySelectorAll(".palbtn").forEach(function(b){
-  b.addEventListener("click",function(){ setPalette(b.getAttribute("data-pal")); });
-});
-document.getElementById("themeBtn").addEventListener("click",function(){
-  var dark=document.documentElement.getAttribute("data-theme")==="dark";
-  setTheme(dark ? "light" : "dark");
-});
-
-/* görsel yüklenemezse koyu çubuk yerine nötr kutu */
-document.querySelectorAll(".shot img").forEach(function(img){
-  img.addEventListener("error", function(){ img.closest(".shot").classList.add("fail"); });
-});
-
-/* kayıtlı tercihler */
-try{
-  var s=JSON.parse(localStorage.getItem("ok26")||"{}");
-  if(s.palette) setPalette(s.palette);
-  if(s.theme) setTheme(s.theme);
-  if(s.lang && I18N[s.lang]) applyLang(s.lang); else applyLang("tr");
-}catch(e){ applyLang("tr"); }
 </script>
 </body>
 </html>
