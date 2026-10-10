@@ -56,6 +56,10 @@ h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
 footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
 footer a{color:#7fe6d3}
 .hidden{display:none!important}
+.logo-sm{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:6px;margin-bottom:12px;border:1px solid rgba(217,182,98,.5)}
+.logo-big{width:62%;max-width:300px;aspect-ratio:1/1;object-fit:contain;margin:0 auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.about p{color:var(--text);font-size:1rem;max-width:80ch;margin:0}
+.card img.logo-card{aspect-ratio:1/1;object-fit:contain;padding:14px;background:#fff}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
 @media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 </style>
@@ -63,11 +67,11 @@ footer a{color:#7fe6d3}
 <body>
 <header><div class="wrap bar"><a class="brand" href="../../index.html">ErsenBox Apps</a><a class="back" href="../../index.html">← Tüm uygulamalar</a></div></header>
 <section class="hero"><div class="wrap hero-grid">
-<div><h1>Peygamberimizin Hayatı</h1><p class="lead">Hz. Muhammed&#x27;in (s.a.v.) hayatı.</p>
+<div><img class="logo-sm" src="../../assets/peygamberimizin-hayati/logo.png" alt=""><h1>Peygamberimizin Hayatı</h1><p class="lead">Hz. Muhammed&#x27;in (s.a.v.) hayatı.</p>
 <div class="btns"><a class="btn " href="https://peygamberimizin-hayati.pages.dev" target="_blank" rel="noopener">Web'de Aç</a></div></div>
-<div><div class="cover-ph" aria-hidden="true">☪</div></div>
+<div><img class="cover" src="../../assets/peygamberimizin-hayati/shot-01.jpg" alt="Peygamberimizin Hayatı"></div>
 </div></section>
-
+<section class="about"><div class="wrap"><h2>Hakkında</h2><p>Hz. Muhammed&#x27;in (s.a.v.) hayatını kronoloji, aile ağacı ve yakın çevresi üzerinden anlatan ücretsiz bir web uygulamasıdır. Sayfada İbn Hişâm, Buhârî ve Müslim gibi kaynaklara dayanıldığı belirtilir. Bilgi amaçlıdır, fetva niteliği taşımaz.</p></div></section><section><div class="wrap"><h2>Özellikler</h2><ul class="feat"><li>31 kronoloji olayı: Doğum ve Çocukluk, İlk Vahiy, Mekke ve Medine dönemleri, Fetih, Veda</li><li>Hz. İbrâhîm&#x27;den Peygamberimize uzanan soy ağacı</li><li>Hanımları, çocukları, torunları ve yakın akrabaları</li><li>Hizmetçiler, azatlı köleler ve süt ailesi hakkında bilgi</li><li>16 dil seçeneği; ana ekrana eklenerek mobil uygulama gibi kullanılabilir</li></ul></div></section>
 <footer><div class='wrap'>© 2026 ErsenBox</div></footer>
 </body>
 </html>

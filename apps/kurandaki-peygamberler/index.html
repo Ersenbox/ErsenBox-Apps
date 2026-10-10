@@ -56,6 +56,10 @@ h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
 footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
 footer a{color:#7fe6d3}
 .hidden{display:none!important}
+.logo-sm{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:6px;margin-bottom:12px;border:1px solid rgba(217,182,98,.5)}
+.logo-big{width:62%;max-width:300px;aspect-ratio:1/1;object-fit:contain;margin:0 auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.about p{color:var(--text);font-size:1rem;max-width:80ch;margin:0}
+.card img.logo-card{aspect-ratio:1/1;object-fit:contain;padding:14px;background:#fff}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
 @media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 </style>
@@ -63,11 +67,11 @@ footer a{color:#7fe6d3}
 <body>
 <header><div class="wrap bar"><a class="brand" href="../../index.html">ErsenBox Apps</a><a class="back" href="../../index.html">← Tüm uygulamalar</a></div></header>
 <section class="hero"><div class="wrap hero-grid">
-<div><h1>Kur&#x27;an&#x27;daki Peygamberler</h1><p class="lead">Kur&#x27;an&#x27;da adı geçen peygamberler.</p>
+<div><img class="logo-sm" src="../../assets/kurandaki-peygamberler/logo.png" alt=""><h1>Kur&#x27;an&#x27;daki Peygamberler</h1><p class="lead">Kur&#x27;an&#x27;da adı geçen peygamberler.</p>
 <div class="btns"><a class="btn " href="https://kurandaki-peygamberler.pages.dev" target="_blank" rel="noopener">Web'de Aç</a></div></div>
-<div><div class="cover-ph" aria-hidden="true">☪</div></div>
+<div><img class="cover" src="../../assets/kurandaki-peygamberler/shot-01.jpg" alt="Kur&#x27;an&#x27;daki Peygamberler"></div>
 </div></section>
-
+<section class="about"><div class="wrap"><h2>Hakkında</h2><p>Adem&#x27;den Muhammed&#x27;e kadar Kur&#x27;an&#x27;da adı geçen peygamberleri ve diğer kişileri tanıtan bir web uygulamasıdır. Her kişi için hayat hikâyesi, geçtiği sureler, ayetler ve soy ağacı bulunur. Sayfa, içeriğin Kur&#x27;an&#x27;a dayandığını ve uydurma bilgi eklenmediğini belirtir.</p></div></section><section><div class="wrap"><h2>Özellikler</h2><ul class="feat"><li>Toplam 33 peygamber ve şahıs</li><li>Hikâye derinliğine göre filtre: Tam Hikâye, Kısmen, Sadece İsim</li><li>Zaman çizelgesi ve coğrafi harita; noktalara tıklayarak kartlara geçiş</li><li>Aile şecereleri: ebeveyn-çocuk ilişkileri ve uzak bağlar</li><li>Geçiş sayısı, hikâye türü ve ortak temalar tablosu</li></ul></div></section>
 <footer><div class='wrap'>© 2026 ErsenBox</div></footer>
 </body>
 </html>

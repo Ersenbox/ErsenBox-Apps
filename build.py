@@ -65,6 +65,10 @@ h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
 footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
 footer a{color:#7fe6d3}
 .hidden{display:none!important}
+.logo-sm{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:6px;margin-bottom:12px;border:1px solid rgba(217,182,98,.5)}
+.logo-big{width:62%;max-width:300px;aspect-ratio:1/1;object-fit:contain;margin:0 auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.about p{color:var(--text);font-size:1rem;max-width:80ch;margin:0}
+.card img.logo-card{aspect-ratio:1/1;object-fit:contain;padding:14px;background:#fff}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
 @media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 """
@@ -78,7 +82,12 @@ def images_for(slug):
     d = os.path.join(ROOT, "assets", slug)
     if not os.path.isdir(d):
         return []
-    return sorted(f for f in os.listdir(d) if f.lower().endswith(IMG_EXT))
+    return sorted(f for f in os.listdir(d) if f.lower().endswith(IMG_EXT) and not f.lower().startswith("logo"))
+
+
+def logo_for(slug):
+    p = os.path.join(ROOT, "assets", slug, "logo.png")
+    return "logo.png" if os.path.isfile(p) else None
 
 
 def footer(site):
@@ -119,8 +128,12 @@ def app_page(app, site):
     gallery = [f for f in imgs if f != cover]
     img_base = f"../../assets/{slug}/"
 
+    logo = logo_for(slug)
+    logo_html = f'<img class="logo-sm" src="{img_base}logo.png" alt="">' if logo else ""
     if cover:
         cover_html = f'<img class="cover" src="{img_base}{quote(cover)}" alt="{e(app["name"])}">'
+    elif logo:
+        cover_html = f'<img class="logo-big" src="{img_base}logo.png" alt="{e(app["name"])} logosu">'
     else:
         cover_html = '<div class="cover-ph" aria-hidden="true">☪</div>'
 
@@ -153,12 +166,16 @@ def app_page(app, site):
 <li>“Yükle” düğmesine dokunun.</li>
 </ol></div></section>"""
 
+    about = ""
+    if app.get("description"):
+        about = f'<section class="about"><div class="wrap"><h2>Hakkında</h2><p>{e(app["description"])}</p></div></section>'
+
     body = f"""<section class="hero"><div class="wrap hero-grid">
-<div><h1>{e(app["name"])}</h1><p class="lead">{e(app["tagline"])}</p>
+<div>{logo_html}<h1>{e(app["name"])}</h1><p class="lead">{e(app["tagline"])}</p>
 <div class="btns">{''.join(btns)}</div></div>
 <div>{cover_html}</div>
 </div></section>
-{feats}{gal}{install}
+{about}{feats}{gal}{install}
 {footer(site)}"""
     return page(f'{app["name"]} · ErsenBox', app["tagline"], body, 2), body
 
@@ -171,6 +188,8 @@ def index_page(apps, site):
         cover = a.get("cover") or (imgs[0] if imgs else None)
         if cover:
             thumb = f'<img loading="lazy" src="assets/{slug}/{quote(cover)}" alt="{e(a["name"])}">'
+        elif logo_for(slug):
+            thumb = f'<img class="logo-card" loading="lazy" src="assets/{slug}/logo.png" alt="{e(a["name"])} logosu">'
         else:
             thumb = '<div class="thumb" aria-hidden="true">☪</div>'
         btns = []

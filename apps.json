@@ -13,7 +13,10 @@
       "name": "Offline-Kuran 26",
       "tagline": "Kur'an-ı Kerim'i internet olmadan okuyun ve dinleyin.",
       "draft": true,
-      "apk": { "url": "https://pub-b130636bd7cd49d7a8fc052e042e9c38.r2.dev/Offline-Kuran%2026%20v1.1..apk", "file": "Offline-Kuran 26 v1.1..apk" },
+      "apk": {
+        "url": "https://pub-b130636bd7cd49d7a8fc052e042e9c38.r2.dev/Offline-Kuran%2026%20v1.1..apk",
+        "file": "Offline-Kuran 26 v1.1..apk"
+      },
       "web": null,
       "cover": "tr-banner.jpg",
       "features": [
@@ -29,237 +32,458 @@
       "name": "Amel Defterim 26",
       "tagline": "Günlük ibadet ve amel takibi.",
       "draft": true,
-      "apk": { "url": "https://pub-5a0d65c5dbbd459c9010aa1bc943475b.r2.dev/Amel%20Defterim%2026%20%20v.1.0.apk", "file": "Amel Defterim 26  v.1.0.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-5a0d65c5dbbd459c9010aa1bc943475b.r2.dev/Amel%20Defterim%2026%20%20v.1.0.apk",
+        "file": "Amel Defterim 26  v.1.0.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "benim-tesbihim-26",
       "name": "Benim Tesbihim 26",
       "tagline": "Zikir ve tesbih sayacı.",
       "draft": true,
-      "apk": { "url": "https://pub-8735fd7004b049af81a32fd187f23266.r2.dev/benim-tesbihim-26.apk", "file": "benim-tesbihim-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-8735fd7004b049af81a32fd187f23266.r2.dev/benim-tesbihim-26.apk",
+        "file": "benim-tesbihim-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "ersenbox-kurani-kerim-26",
       "name": "ErsenBox Kur'an-ı Kerim 26",
       "tagline": "Kur'an-ı Kerim okuma ve dinleme uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-2b2f9b67d3694211ae44af4cb030f039.r2.dev/ersenbox-kurani-kerim-26.apk", "file": "ersenbox-kurani-kerim-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-2b2f9b67d3694211ae44af4cb030f039.r2.dev/ersenbox-kurani-kerim-26.apk",
+        "file": "ersenbox-kurani-kerim-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "hadis-sunnet-atlasi-26",
       "name": "Hadis ve Sünnet Atlası",
       "tagline": "Hadis ve sünnet kaynaklarını keşfedin.",
       "draft": true,
-      "apk": { "url": "https://pub-7fb7394236f84e448c4d55a72d7d2af8.r2.dev/hadis-sunnet-atlasi-26.apk.apk", "file": "hadis-sunnet-atlasi-26.apk.apk" },
+      "apk": {
+        "url": "https://pub-7fb7394236f84e448c4d55a72d7d2af8.r2.dev/hadis-sunnet-atlasi-26.apk.apk",
+        "file": "hadis-sunnet-atlasi-26.apk.apk"
+      },
       "web": "https://hadis-sunnet-atlasi.pages.dev",
-      "cover": null, "features": []
+      "cover": null,
+      "features": [
+        "Hadisler, sünnetler, dualar ve Esmâ-ül Hüsnâ bölümleri",
+        "Konu ve kelimeye göre arama",
+        "Günün hadisi, günün sünneti ve günün duası",
+        "Kaynak bilgisi ile birlikte içerik gösterimi",
+        "Hadis ve Sünnet Atlası ailesinin diğer uygulamalarına bağlantılar"
+      ],
+      "description": "Hadis ve sünnet kaynaklarını sade bir arayüzle keşfetmenizi sağlayan web uygulamasıdır. Hadis, sünnet, dua ve Esmâ-ül Hüsnâ içerikleri kategorilere ayrılmıştır. Hadis ve Sünnet Atlası projesi kapsamında yayınlanmaktadır."
     },
     {
       "slug": "islam-takvimi-26",
       "name": "İslam Takvimi 26",
       "tagline": "İslami takvim ve önemli günler.",
       "draft": true,
-      "apk": { "url": "https://pub-799bb6059c2b4908a746d0a49c859d75.r2.dev/Islam-Takvimi%2026%20v.1.2.apk", "file": "Islam-Takvimi 26 v.1.2.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-799bb6059c2b4908a746d0a49c859d75.r2.dev/Islam-Takvimi%2026%20v.1.2.apk",
+        "file": "Islam-Takvimi 26 v.1.2.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "kassenbuch-26",
       "name": "Kassenbuch 26",
       "tagline": "Gelir ve gider takibi için kasa defteri.",
       "draft": true,
-      "apk": { "url": "https://pub-0d55116c19f94af28f81761bf2bf002d.r2.dev/Kassenbuch%2026%20v.2.0..apk", "file": "Kassenbuch 26 v.2.0..apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-0d55116c19f94af28f81761bf2bf002d.r2.dev/Kassenbuch%2026%20v.2.0..apk",
+        "file": "Kassenbuch 26 v.2.0..apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "mathe-puzzle-26",
       "name": "Mathe-Puzzle Spiel 26",
       "tagline": "Matematik bulmaca oyunu.",
       "draft": true,
-      "apk": { "url": "https://pub-5821f36315c54ede84c47adf18489b03.r2.dev/Mathe-Puzzle%20Spiel%2026.apk", "file": "Mathe-Puzzle Spiel 26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-5821f36315c54ede84c47adf18489b03.r2.dev/Mathe-Puzzle%20Spiel%2026.apk",
+        "file": "Mathe-Puzzle Spiel 26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "smart-planer-26",
       "name": "Smart Planer 26",
       "tagline": "Akıllı günlük ve görev planlayıcı.",
       "draft": true,
-      "apk": { "url": "https://pub-67aec7c77e3b4de2a546c0c20805dff8.r2.dev/smart-planer-26.apk", "file": "smart-planer-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-67aec7c77e3b4de2a546c0c20805dff8.r2.dev/smart-planer-26.apk",
+        "file": "smart-planer-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "yolumuz-kuran-26",
       "name": "Yolumuz Kur'an 26",
       "tagline": "Kur'an okuma yolculuğunuz için uygulama.",
       "draft": true,
-      "apk": { "url": "https://pub-47a0b716272d425990ad718fabec3431.r2.dev/Yolumuz%20Kur%27an%2026%20v.1.0.0.apk", "file": "Yolumuz Kur'an 26 v.1.0.0.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-47a0b716272d425990ad718fabec3431.r2.dev/Yolumuz%20Kur%27an%2026%20v.1.0.0.apk",
+        "file": "Yolumuz Kur'an 26 v.1.0.0.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "tuerkisch-lernen-26",
       "name": "Türkisch Lernen 26",
       "tagline": "Türkçe öğrenme uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-b4ec92837c7848dcaad149df58d2b671.r2.dev/tuerkisch-lernen-26.apk", "file": "tuerkisch-lernen-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-b4ec92837c7848dcaad149df58d2b671.r2.dev/tuerkisch-lernen-26.apk",
+        "file": "tuerkisch-lernen-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "passwort-safe-26",
       "name": "Passwort-Safe 26",
       "tagline": "Parolalarınızı güvenle saklayın.",
       "draft": true,
-      "apk": { "url": "https://pub-4b891171e681460dbeac7cf4db5c3bea.r2.dev/passwort-safe-26.apk", "file": "passwort-safe-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-4b891171e681460dbeac7cf4db5c3bea.r2.dev/passwort-safe-26.apk",
+        "file": "passwort-safe-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "sprachcenter-26",
       "name": "SprachCenter 26",
       "tagline": "Sesle yazma, sesli okuma ve çeviri.",
       "draft": true,
-      "apk": { "url": "https://pub-bdcca29daec248008985690c8790b08d.r2.dev/sprachcenter-26.apk", "file": "sprachcenter-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-bdcca29daec248008985690c8790b08d.r2.dev/sprachcenter-26.apk",
+        "file": "sprachcenter-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "inkpad-not-defteri",
       "name": "Inkpad Not Defteri",
       "tagline": "Hızlı ve sade not defteri.",
       "draft": true,
-      "apk": { "url": "https://pub-a967f0d0678e46a69c076756f7bff016.r2.dev/inkpad-not-defteri.apk", "file": "inkpad-not-defteri.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-a967f0d0678e46a69c076756f7bff016.r2.dev/inkpad-not-defteri.apk",
+        "file": "inkpad-not-defteri.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "smartnotes-26",
       "name": "Smartnotes 26",
       "tagline": "Akıllı not uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-7d4ecbe49f1d4021aac291dcec43f329.r2.dev/smartnotes-26.apk", "file": "smartnotes-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-7d4ecbe49f1d4021aac291dcec43f329.r2.dev/smartnotes-26.apk",
+        "file": "smartnotes-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "notize-26",
       "name": "Notize 26",
       "tagline": "Notlarınızı hızlıca yazın ve düzenleyin.",
       "draft": true,
-      "apk": { "url": "https://pub-ddebe898383d4feba280f5f0d7e1280c.r2.dev/notize-26.apk", "file": "notize-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-ddebe898383d4feba280f5f0d7e1280c.r2.dev/notize-26.apk",
+        "file": "notize-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "multi-scanner-26",
       "name": "Multi-Scanner 26",
       "tagline": "Tarama uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-a3547a15148543de9d0cc173578b1468.r2.dev/multi-scanner-26.apk", "file": "multi-scanner-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-a3547a15148543de9d0cc173578b1468.r2.dev/multi-scanner-26.apk",
+        "file": "multi-scanner-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "auto-connect-26",
       "name": "Auto-Connect 26",
       "tagline": "Otomatik bağlantı uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-6cdb68c1db124c9b95f54aab7b14caac.r2.dev/auto-connect-26.apk", "file": "auto-connect-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-6cdb68c1db124c9b95f54aab7b14caac.r2.dev/auto-connect-26.apk",
+        "file": "auto-connect-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "ersenbox-mathe-26",
       "name": "ErsenBox Mathe 26",
       "tagline": "Matematik çalışma uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-a8fbf79a79fc400c84452e705fe7804e.r2.dev/ersenbox-mathe-26.apk", "file": "ersenbox-mathe-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-a8fbf79a79fc400c84452e705fe7804e.r2.dev/ersenbox-mathe-26.apk",
+        "file": "ersenbox-mathe-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "ersenbox-multi-tabele-26",
       "name": "ErsenBox Multi-Tabelle 26",
       "tagline": "Çarpım tablosu çalışma uygulaması.",
       "draft": true,
-      "apk": { "url": "https://pub-c1ddd6b9ca1f4ce39c32ca92b1899dbc.r2.dev/ersenbox-multi-tabele-26.apk", "file": "ersenbox-multi-tabele-26.apk" },
-      "web": null, "cover": null, "features": []
+      "apk": {
+        "url": "https://pub-c1ddd6b9ca1f4ce39c32ca92b1899dbc.r2.dev/ersenbox-multi-tabele-26.apk",
+        "file": "ersenbox-multi-tabele-26.apk"
+      },
+      "web": null,
+      "cover": null,
+      "features": []
     },
     {
       "slug": "kuran-dinle-26",
       "name": "Kur'an Dinle 26",
       "tagline": "Kur'an-ı Kerim dinleme uygulaması.",
       "draft": true,
-      "apk": null, "web": "https://kuran-dinle-26.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://kuran-dinle-26.pages.dev",
+      "cover": null,
+      "features": [
+        "114 sure ve 30 cüz listesi; secde ayetleri işaretli",
+        "Okuyucu seçimi ve 0,5x–2x arasında oynatma hızı",
+        "Diyanet ve Elmalılı meali; İngilizce, Almanca, Fransızca meal",
+        "Çevrimdışı mod: cüzleri veya tüm 604 sayfayı indirme",
+        "Mushaf stilleri, 4 yazı tipi, renkli tecvid gösterimi"
+      ],
+      "description": "Kur'an-ı Kerim'i okumak ve dinlemek için hazırlanmış web uygulamasıdır. Sure ve cüz listelerinden istediğiniz bölüme ulaşabilir, arama yapabilir ve sesli dinleyebilirsiniz. Çevrimdışı kullanım, meal ve okunuş seçenekleri de sunar."
     },
     {
       "slug": "namaz-hocam-26",
       "name": "Namaz Hocam 26",
       "tagline": "Namaz öğrenme rehberi.",
       "draft": true,
-      "apk": null, "web": "https://namaz-hocam-26.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://namaz-hocam-26.pages.dev",
+      "cover": null,
+      "features": [
+        "Günlük namaz vakitleri (İmsak, Güneş, Öğle, İkindi, Akşam, Yatsı)",
+        "Adım adım namaz rehberi",
+        "Abdest rehberi",
+        "Sureler bölümü",
+        "Vakitler ve konum bazlı takip"
+      ],
+      "description": "İslami eğitim uygulamasıdır. Namaz vakitlerini, Kur'an sureleri ve abdest gibi temel ibadet bilgilerini tek ekranda toplar. Açılış ekranında günlük vakitler ve dört ana bölüm (Namaz, Abdest, Sureler, Vakitler) bulunur."
     },
     {
       "slug": "dua-atlasi",
       "name": "Dua Atlası",
       "tagline": "Dualar ve kaynakları.",
       "draft": true,
-      "apk": null, "web": "https://dua-atlasi.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://dua-atlasi.pages.dev",
+      "cover": null,
+      "features": [
+        "277 dua, 23 kategoride düzenlenmiş",
+        "Her dua için Arapça metin, okunuş ve meâl",
+        "Her dua için kaynak: Buhârî, Müslim, Ebû Dâvûd, Tirmizî, Nesâî, İbn Mâce, Ahmed b. Hanbel ve Kur'an",
+        "Hadisler, Salavatlar ve Esmâ-ül Hüsnâ bölümleri",
+        "Ücretsiz, reklamsız; ana ekrana eklenebilir"
+      ],
+      "description": "Sahih ve güvenilir kaynaklara dayanan, kategorilere ayrılmış bir dua koleksiyonudur. Her dua için Arapça metin, okunuş, meâl ve kaynak bilgisi sunulur. Uygulama ücretsizdir ve reklam içermez."
     },
     {
       "slug": "kuran-26",
       "name": "Kur'an 26",
       "tagline": "Kur'an-ı Kerim web uygulaması.",
       "draft": true,
-      "apk": null, "web": "https://kuran-26.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://kuran-26.pages.dev",
+      "cover": null,
+      "features": [
+        "114 sure ve 30 cüz: Arapça metin, okunuş, meal ve kelime sözlüğü",
+        "16 farklı okuyucudan kıraat seçimi ve sure dinleme",
+        "Konuma göre namaz vakitleri, imsakiye ve vakit ezanı bildirimleri",
+        "Kıble pusulası ve 2026–2027 Hicri takvimi, dini gün ve kandiller",
+        "Çevrimdışı kullanım, son okunan yerden devam, tema ve yazı tipi ayarları"
+      ],
+      "description": "Kur'an okumak, namaz vakitlerini görmek, kıble yönünü bulmak ve dini takvimi takip etmek için tasarlanmış bir PWA'dır. Sure, cüz, namaz, kıble ve takvim bölümleri tek yerdedir ve çevrimdışı kullanılabilir."
     },
     {
       "slug": "kurandaki-peygamberler",
       "name": "Kur'an'daki Peygamberler",
       "tagline": "Kur'an'da adı geçen peygamberler.",
       "draft": true,
-      "apk": null, "web": "https://kurandaki-peygamberler.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://kurandaki-peygamberler.pages.dev",
+      "cover": null,
+      "features": [
+        "Toplam 33 peygamber ve şahıs",
+        "Hikâye derinliğine göre filtre: Tam Hikâye, Kısmen, Sadece İsim",
+        "Zaman çizelgesi ve coğrafi harita; noktalara tıklayarak kartlara geçiş",
+        "Aile şecereleri: ebeveyn-çocuk ilişkileri ve uzak bağlar",
+        "Geçiş sayısı, hikâye türü ve ortak temalar tablosu"
+      ],
+      "description": "Adem'den Muhammed'e kadar Kur'an'da adı geçen peygamberleri ve diğer kişileri tanıtan bir web uygulamasıdır. Her kişi için hayat hikâyesi, geçtiği sureler, ayetler ve soy ağacı bulunur. Sayfa, içeriğin Kur'an'a dayandığını ve uydurma bilgi eklenmediğini belirtir."
     },
     {
       "slug": "peygamberimizin-hayati",
       "name": "Peygamberimizin Hayatı",
       "tagline": "Hz. Muhammed'in (s.a.v.) hayatı.",
       "draft": true,
-      "apk": null, "web": "https://peygamberimizin-hayati.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://peygamberimizin-hayati.pages.dev",
+      "cover": null,
+      "features": [
+        "31 kronoloji olayı: Doğum ve Çocukluk, İlk Vahiy, Mekke ve Medine dönemleri, Fetih, Veda",
+        "Hz. İbrâhîm'den Peygamberimize uzanan soy ağacı",
+        "Hanımları, çocukları, torunları ve yakın akrabaları",
+        "Hizmetçiler, azatlı köleler ve süt ailesi hakkında bilgi",
+        "16 dil seçeneği; ana ekrana eklenerek mobil uygulama gibi kullanılabilir"
+      ],
+      "description": "Hz. Muhammed'in (s.a.v.) hayatını kronoloji, aile ağacı ve yakın çevresi üzerinden anlatan ücretsiz bir web uygulamasıdır. Sayfada İbn Hişâm, Buhârî ve Müslim gibi kaynaklara dayanıldığı belirtilir. Bilgi amaçlıdır, fetva niteliği taşımaz."
     },
     {
       "slug": "zikirmatik-26",
       "name": "Zikirmatik 26",
       "tagline": "Web tabanlı zikirmatik.",
       "draft": true,
-      "apk": null, "web": "https://zikirmatik-26.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://zikirmatik-26.pages.dev",
+      "cover": null,
+      "features": [
+        "450 zikir, dua ve Esmâ-ül Hüsnâ",
+        "Sayaçlı zikir takibi ve hedefe ulaşınca tamamlandı bildirimi",
+        "Kategoriler: Tümü, Temel Zikirler, Esmâ-ül Hüsnâ, Dua Atlası",
+        "Kişisel “Listem”: kendi zikirlerinizi ekleyin ve düzenleyin",
+        "Günlük, haftalık ve ömür boyu istatistikler; veri dışa/içe aktarma"
+      ],
+      "description": "Esmâ-ül Hüsnâ, temel zikirler ve sahih dualardan oluşan sayaçlı bir zikirmatik uygulamasıdır. Sayaç hedefe ulaştığında bildirim verir. Ücretsiz ve reklamsızdır, hayır amacıyla sunulmaktadır."
     },
     {
       "slug": "namaz-vakti-26",
       "name": "Namaz Vakti 26",
       "tagline": "Namaz vakitleri.",
       "draft": true,
-      "apk": null, "web": "https://namaz-vakti-26.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://namaz-vakti-26.pages.dev",
+      "cover": null,
+      "features": [
+        "Günlük namaz vakitleri, sonraki vakte geri sayım ve imsakiye",
+        "Kıble yönü, Kabe'ye mesafe ve kıble açısı",
+        "Tesbih sayacı: 33'ten 1000'e hedef sayılar, titreşim ve ses bildirimi",
+        "Günlük, haftalık, aylık ve toplam namaz kayıtları",
+        "Dua kitaplığı, adım adım namaz rehberi, veri yedekleme ve geri yükleme"
+      ],
+      "description": "ErsenBox tarafından hazırlanan, ücretsiz ve reklamsız bir web uygulamasıdır. Namaz vakitlerini, kıble yönünü ve tesbih sayacını bir arada sunar. Vakitler Diyanet yöntemine göre hesaplanır, çevrimdışı çalışabilir."
     },
     {
       "slug": "salavatlar-atlasi",
       "name": "Salavatlar Atlası",
       "tagline": "Salavat-ı Şerifler.",
       "draft": true,
-      "apk": null, "web": "https://salavatlar-atlasi.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://salavatlar-atlasi.pages.dev",
+      "cover": null,
+      "features": [
+        "100 salavat, 7 kategoride",
+        "Her salavat için Arapça metin, okunuş ve Türkçe anlam",
+        "Kaynak sınıflandırması: sahih, zayıf veya telif ikonları",
+        "Arama; sıra numarası, A–Z ya da kategoriye göre sıralama",
+        "Yazı boyutu ayarı ve Medine, Gece, Kâbe, Osmanlı, Endülüs temaları"
+      ],
+      "description": "Hz. Muhammed ﷺ'e okunan salavatların bir koleksiyonudur. 100 salavat 7 kategoride toplanmıştır. Her biri için Arapça metin, okunuş, anlam ve kaynak bilgisi bulunur. Ücretsiz, reklamsız ve bilgi amaçlıdır."
     },
     {
       "slug": "sahabe-atlasi",
       "name": "Sahabe Atlası",
       "tagline": "Sahabe-i Kiram hakkında bilgiler.",
       "draft": true,
-      "apk": null, "web": "https://sahabe-atlasi.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://sahabe-atlasi.pages.dev",
+      "cover": null,
+      "features": [
+        "300'den fazla sahabe biyografisi ve kısa hikâyesi",
+        "Arama özelliğiyle istediğiniz sahabiyi hızlı bulma",
+        "Medine, Kâbe, Osmanlı ve Endülüs gibi kategori başlıkları",
+        "15 dilde arayüz seçeneği",
+        "Android ve iPhone'a ana ekran kısayolu olarak eklenebilir"
+      ],
+      "description": "Hz. Peygamber'in (s.a.v.) ashabının isimlerini, kategorilerini ve kısa hayat hikâyelerini bir araya getiren ücretsiz bir web uygulamasıdır. Hadis ve Sünnet Atlası projesinin bir parçasıdır. Biyografiler İbn Hişâm, İbn Sa'd ve İbn Kesir gibi klasik kaynaklara dayandırılmıştır."
     },
     {
       "slug": "peygamberimizin-sahsiyeti",
       "name": "Peygamberimizin Şahsiyeti",
       "tagline": "Hz. Muhammed'in (s.a.v.) şahsiyeti ve ahlakı.",
       "draft": true,
-      "apk": null, "web": "https://peygamberimizin-sahsiyeti.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://peygamberimizin-sahsiyeti.pages.dev",
+      "cover": null,
+      "features": [
+        "46 konu başlığı altında kaynaklı hadisler",
+        "“Peygamberimizden Unutulmaz Anlar” bölümünde kısa hikâyeler",
+        "Mobilde hızlı okunabilen “1 Dakika” içerikleri",
+        "Rastgele hadis gösterimi ve kelime araması",
+        "Yazı boyutu ayarı, favoriler, kopyalama, ana ekrana ekleme"
+      ],
+      "description": "Hz. Muhammed'in (s.a.v.) ahlakını, günlük hayatını, ilişkilerini ve liderliğini kaynaklı hadislerle anlatan ücretsiz bir Hadis ve Sünnet Atlası'dır. Hadisler Buhârî, Müslim, Ebû Dâvûd, Tirmizî, Nesâî ve İbn Mâce'den aktarılmıştır. Bilgi amaçlıdır, fetva niteliği taşımaz."
     },
     {
       "slug": "digital-zikir-26",
       "name": "Digital Zikir 26",
       "tagline": "Dijital zikir sayacı.",
       "draft": true,
-      "apk": null, "web": "https://digital-zikir-26.pages.dev", "cover": null, "features": []
+      "apk": null,
+      "web": "https://digital-zikir-26.pages.dev",
+      "cover": null,
+      "features": [
+        "Çok adımlı virdler ve 99 Esmâ-ül Hüsnâ ile zikir sayımı",
+        "17 vakitli namaz çizelgesi, vakit alarmları ve iftara kalan süre",
+        "Haritalı kıble pusulası; kıbleye dönünce titreşim uyarısı",
+        "Kaza namazı takibi ve tahmini süre hesaplama",
+        "Bulut senkronizasyonu, yedekleme/geri yükleme ve tespih paylaşımı"
+      ],
+      "description": "Zikir çekmek ve namaz vakitlerini takip etmek için tasarlanmış dijital bir tespih ve namaz vakitleri uygulamasıdır. Zikir sayacı, vird, kıble, kaza namazı takibi ve bulut senkronizasyonunu tek yerde toplar. Ana vakitler Diyanet yöntemiyle alınır, ara vakitler yaklaşık hesaplanır; resmî takvim esas alınmalıdır."
     }
   ]
 }

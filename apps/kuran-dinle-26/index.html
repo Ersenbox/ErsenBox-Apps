@@ -56,6 +56,10 @@ h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
 footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
 footer a{color:#7fe6d3}
 .hidden{display:none!important}
+.logo-sm{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:6px;margin-bottom:12px;border:1px solid rgba(217,182,98,.5)}
+.logo-big{width:62%;max-width:300px;aspect-ratio:1/1;object-fit:contain;margin:0 auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.about p{color:var(--text);font-size:1rem;max-width:80ch;margin:0}
+.card img.logo-card{aspect-ratio:1/1;object-fit:contain;padding:14px;background:#fff}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
 @media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 </style>
@@ -63,11 +67,11 @@ footer a{color:#7fe6d3}
 <body>
 <header><div class="wrap bar"><a class="brand" href="../../index.html">ErsenBox Apps</a><a class="back" href="../../index.html">← Tüm uygulamalar</a></div></header>
 <section class="hero"><div class="wrap hero-grid">
-<div><h1>Kur&#x27;an Dinle 26</h1><p class="lead">Kur&#x27;an-ı Kerim dinleme uygulaması.</p>
+<div><img class="logo-sm" src="../../assets/kuran-dinle-26/logo.png" alt=""><h1>Kur&#x27;an Dinle 26</h1><p class="lead">Kur&#x27;an-ı Kerim dinleme uygulaması.</p>
 <div class="btns"><a class="btn " href="https://kuran-dinle-26.pages.dev" target="_blank" rel="noopener">Web'de Aç</a></div></div>
-<div><div class="cover-ph" aria-hidden="true">☪</div></div>
+<div><img class="cover" src="../../assets/kuran-dinle-26/shot-01.jpg" alt="Kur&#x27;an Dinle 26"></div>
 </div></section>
-
+<section class="about"><div class="wrap"><h2>Hakkında</h2><p>Kur&#x27;an-ı Kerim&#x27;i okumak ve dinlemek için hazırlanmış web uygulamasıdır. Sure ve cüz listelerinden istediğiniz bölüme ulaşabilir, arama yapabilir ve sesli dinleyebilirsiniz. Çevrimdışı kullanım, meal ve okunuş seçenekleri de sunar.</p></div></section><section><div class="wrap"><h2>Özellikler</h2><ul class="feat"><li>114 sure ve 30 cüz listesi; secde ayetleri işaretli</li><li>Okuyucu seçimi ve 0,5x–2x arasında oynatma hızı</li><li>Diyanet ve Elmalılı meali; İngilizce, Almanca, Fransızca meal</li><li>Çevrimdışı mod: cüzleri veya tüm 604 sayfayı indirme</li><li>Mushaf stilleri, 4 yazı tipi, renkli tecvid gösterimi</li></ul></div></section>
 <footer><div class='wrap'>© 2026 ErsenBox</div></footer>
 </body>
 </html>

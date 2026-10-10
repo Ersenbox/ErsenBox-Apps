@@ -56,6 +56,10 @@ h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
 footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
 footer a{color:#7fe6d3}
 .hidden{display:none!important}
+.logo-sm{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:6px;margin-bottom:12px;border:1px solid rgba(217,182,98,.5)}
+.logo-big{width:62%;max-width:300px;aspect-ratio:1/1;object-fit:contain;margin:0 auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.about p{color:var(--text);font-size:1rem;max-width:80ch;margin:0}
+.card img.logo-card{aspect-ratio:1/1;object-fit:contain;padding:14px;background:#fff}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
 @media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 </style>
@@ -63,11 +67,11 @@ footer a{color:#7fe6d3}
 <body>
 <header><div class="wrap bar"><a class="brand" href="../../index.html">ErsenBox Apps</a><a class="back" href="../../index.html">← Tüm uygulamalar</a></div></header>
 <section class="hero"><div class="wrap hero-grid">
-<div><h1>Namaz Vakti 26</h1><p class="lead">Namaz vakitleri.</p>
+<div><img class="logo-sm" src="../../assets/namaz-vakti-26/logo.png" alt=""><h1>Namaz Vakti 26</h1><p class="lead">Namaz vakitleri.</p>
 <div class="btns"><a class="btn " href="https://namaz-vakti-26.pages.dev" target="_blank" rel="noopener">Web'de Aç</a></div></div>
-<div><div class="cover-ph" aria-hidden="true">☪</div></div>
+<div><img class="cover" src="../../assets/namaz-vakti-26/shot-01.jpg" alt="Namaz Vakti 26"></div>
 </div></section>
-
+<section class="about"><div class="wrap"><h2>Hakkında</h2><p>ErsenBox tarafından hazırlanan, ücretsiz ve reklamsız bir web uygulamasıdır. Namaz vakitlerini, kıble yönünü ve tesbih sayacını bir arada sunar. Vakitler Diyanet yöntemine göre hesaplanır, çevrimdışı çalışabilir.</p></div></section><section><div class="wrap"><h2>Özellikler</h2><ul class="feat"><li>Günlük namaz vakitleri, sonraki vakte geri sayım ve imsakiye</li><li>Kıble yönü, Kabe&#x27;ye mesafe ve kıble açısı</li><li>Tesbih sayacı: 33&#x27;ten 1000&#x27;e hedef sayılar, titreşim ve ses bildirimi</li><li>Günlük, haftalık, aylık ve toplam namaz kayıtları</li><li>Dua kitaplığı, adım adım namaz rehberi, veri yedekleme ve geri yükleme</li></ul></div></section>
 <footer><div class='wrap'>© 2026 ErsenBox</div></footer>
 </body>
 </html>

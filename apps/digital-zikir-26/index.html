@@ -56,6 +56,10 @@ h2{font-size:1.5rem;color:var(--brand);margin:0 0 18px}
 footer{background:var(--brand-dk);color:#c9ddce;text-align:center;padding:28px 0;font-size:.9rem;margin-top:40px}
 footer a{color:#7fe6d3}
 .hidden{display:none!important}
+.logo-sm{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:6px;margin-bottom:12px;border:1px solid rgba(217,182,98,.5)}
+.logo-big{width:62%;max-width:300px;aspect-ratio:1/1;object-fit:contain;margin:0 auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.about p{color:var(--text);font-size:1rem;max-width:80ch;margin:0}
+.card img.logo-card{aspect-ratio:1/1;object-fit:contain;padding:14px;background:#fff}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}
 @media (max-width:600px){.grid,.feat,.steps,.gal{grid-template-columns:1fr}.wrap{width:calc(100% - 32px)}.btn{width:100%;text-align:center}.btns{flex-direction:column}}
 </style>
@@ -63,11 +67,11 @@ footer a{color:#7fe6d3}
 <body>
 <header><div class="wrap bar"><a class="brand" href="../../index.html">ErsenBox Apps</a><a class="back" href="../../index.html">← Tüm uygulamalar</a></div></header>
 <section class="hero"><div class="wrap hero-grid">
-<div><h1>Digital Zikir 26</h1><p class="lead">Dijital zikir sayacı.</p>
+<div><img class="logo-sm" src="../../assets/digital-zikir-26/logo.png" alt=""><h1>Digital Zikir 26</h1><p class="lead">Dijital zikir sayacı.</p>
 <div class="btns"><a class="btn " href="https://digital-zikir-26.pages.dev" target="_blank" rel="noopener">Web'de Aç</a></div></div>
-<div><div class="cover-ph" aria-hidden="true">☪</div></div>
+<div><img class="cover" src="../../assets/digital-zikir-26/shot-01.jpg" alt="Digital Zikir 26"></div>
 </div></section>
-
+<section class="about"><div class="wrap"><h2>Hakkında</h2><p>Zikir çekmek ve namaz vakitlerini takip etmek için tasarlanmış dijital bir tespih ve namaz vakitleri uygulamasıdır. Zikir sayacı, vird, kıble, kaza namazı takibi ve bulut senkronizasyonunu tek yerde toplar. Ana vakitler Diyanet yöntemiyle alınır, ara vakitler yaklaşık hesaplanır; resmî takvim esas alınmalıdır.</p></div></section><section><div class="wrap"><h2>Özellikler</h2><ul class="feat"><li>Çok adımlı virdler ve 99 Esmâ-ül Hüsnâ ile zikir sayımı</li><li>17 vakitli namaz çizelgesi, vakit alarmları ve iftara kalan süre</li><li>Haritalı kıble pusulası; kıbleye dönünce titreşim uyarısı</li><li>Kaza namazı takibi ve tahmini süre hesaplama</li><li>Bulut senkronizasyonu, yedekleme/geri yükleme ve tespih paylaşımı</li></ul></div></section>
 <footer><div class='wrap'>© 2026 ErsenBox</div></footer>
 </body>
 </html>
